@@ -1,0 +1,63 @@
+#header-container {
+  border-width: 1px;
+  border-color: white;
+  border-bottom-style: solid;
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+#desktop-nav {
+  display: block;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-col-12 {
+  grid-template-columns: repeat(12,minmax(0,1fr));
+  column-gap: 2.5rem;
+}
+
+.col-span-1 {
+  grid-column-end: span 1;
+}
+
+.col-span-2 {
+  grid-column-end: span 2;
+}
+
+.col-span-3 {
+  grid-column-end: span 3;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.col-start-7 {
+  grid-column-start: 7;
+}
+
+.col-start-8 {
+  grid-column-start: 8;
+}
+
+.col-start-9 {
+  grid-column-start: 9;
+}
+
+.col-start-10 {
+  grid-column-start: 10;
+}
+
+.col-start-11 {
+  grid-column-start: 11;
+}
+
+.col-start-12 {
+  grid-column-start: 12;
+}

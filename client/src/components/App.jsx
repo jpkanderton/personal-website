@@ -1,20 +1,30 @@
 import React from 'react';
 import axios from 'axios';
+import Home from './Home.jsx';
+import Landing, { Wazzup } from './Landing.jsx';
 
 const { useState } = React;
 
 const App = () =>{
-  const [hooksExample, setHooksExample] = useState('This is a React Hooks example');
-  const [counter, setCounter] = useState(0);
+  const [landingStatus, setLandingStatus] = useState('enter');
 
-  const handleClick = () => setCounter(counter + 1);
+  const landingClick = () => {
+    setTimeout(() => {
+      console.log('exited')
+      setLandingStatus('exited')
+    }, 1000);
+    console.log('exiting')
+    setLandingStatus('exiting');
+  };
 
   return (
-    <div>
-      <div onClick = {handleClick}>
-        {hooksExample} has been clicked {counter} times
-      </div>
-    </div>
+    <>
+    {console.log('landingStatus: ', landingStatus)}
+      <Home />
+      <Landing landingClick={landingClick} status={landingStatus}/>
+      <div id="x-logo-container"><p>I will display &#9986;</p>
+</div>
+    </>
   )
 }
 
