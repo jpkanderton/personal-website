@@ -1,20 +1,30 @@
 import React from 'react';
 import axios from 'axios';
 import Home from './Home.jsx';
+import MainIcon from './MainIcon.jsx'
 import Landing, { Wazzup } from './Landing.jsx';
+
 
 const { useState } = React;
 
 const App = () =>{
-  const [landingStatus, setLandingStatus] = useState('enter');
+  const [landingStatus, setLandingStatus] = useState('entered');
 
   const landingClick = () => {
+    if (landingStatus === 'exited') {
+      return setLandingStatus('entered')
+    }
     setTimeout(() => {
-      console.log('exited')
       setLandingStatus('exited')
     }, 1000);
-    console.log('exiting')
     setLandingStatus('exiting');
+  };
+
+  const exitingClick = () => {
+    setTimeout(() => {
+      setLandingStatus('entered')
+    }, 1000);
+    setLandingStatus('entering');
   };
 
   return (
@@ -22,8 +32,7 @@ const App = () =>{
     {console.log('landingStatus: ', landingStatus)}
       <Home />
       <Landing landingClick={landingClick} status={landingStatus}/>
-      <div id="x-logo-container"><p>I will display &#9986;</p>
-</div>
+      <MainIcon status={landingStatus} landingClick={landingClick} exitingClick={exitingClick}/>
     </>
   )
 }

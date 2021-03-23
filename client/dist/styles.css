@@ -119,3 +119,15 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+#main-icon-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50px;
+  right: 5vw;
+  background-color: grey;
+  transition: all 2s ease;
+}
+

@@ -1,5 +1,4 @@
 import React from 'react';
-// import mountain from '../../dist/resources/mountain-background.jpg';
 
 const { useState, useEffect } = React;
 let count = 0;
@@ -50,3 +49,6 @@ const outerStyleExited = {
 const outerStyleExiting = {
   opacity: '0%',
 }
+
+// BsThreeDots
+// BsX
