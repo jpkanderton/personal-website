@@ -17,9 +17,9 @@ const MainIcon = ({status, landingClick}) =>{
   }
 
   return (
-    <div id="main-icon-container" style={xlcStyle} onClick={landingClick}>
-      {status === 'entered' ? <BsX style={BsXStyle} size={70}/> : <FaGripLines size={70}/>}
-    </div>
+    <a id="main-icon-container" style={xlcStyle} onClick={landingClick} href="#top">
+      {status === 'entered' ? <BsX style={BsXStyle} size={70} color={'white'}/> : <FaGripLines size={35} color={'white'}/>}
+    </a>
   )
 }
 
@@ -28,9 +28,14 @@ export default MainIcon;
 
 
 const xlcStyleExit = {
-  backgroundColor: 'black'
+  backgroundColor: 'transparent'
 }
 
 const BsXStyleExit = {
   opacity: '0%'
+}
+
+const FaGripLinesStyle = {
+  color: 'white',
+  size: '70'
 }

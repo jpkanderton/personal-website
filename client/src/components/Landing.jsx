@@ -7,13 +7,16 @@ const Landing = ({landingClick, status}) => {
 
   let outerStyle = null;
   let innerStyle = null;
+  let landingSquareStyle = null;
 
   if (status === 'exiting') {
     outerStyle = outerStyleExiting;
     innerStyle = innerStyleExit;
+    landingSquareStyle = landingSquareStyleExit;
   } else if (status === 'exited') {
     outerStyle = outerStyleExited;
     innerStyle = innerStyleExit;
+    landingSquareStyle = landingSquareStyleExit;
   }
 
   const [line, setLine] = useState('');
@@ -24,6 +27,7 @@ const Landing = ({landingClick, status}) => {
 
   return (
     <div id="landing-container" style={outerStyle}>
+      <div id="landing-square"></div>
       <div className="hidden-wrapper">
         <div id="landing-inner" onClick={landingClick} style={innerStyle}>
           <div id="landing-text">{line}</div>
@@ -47,7 +51,11 @@ const outerStyleExited = {
 }
 
 const outerStyleExiting = {
-  opacity: '0%',
+  opacity: '0%'
+}
+
+const landingSquareStyleExit = {
+  opacity: '0%'
 }
 
 // BsThreeDots
