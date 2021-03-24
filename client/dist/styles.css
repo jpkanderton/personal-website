@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: white;
 }
 
 a:hover {
-  color: blueviolet;
+  text-decoration: underline;
 }
 
 .ss-font {
