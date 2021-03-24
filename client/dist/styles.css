@@ -39,15 +39,9 @@ body {
 }
 
 #app {
-  /* background-color: darkgoldenrod;
-  height: 100vh;
-  width: 100vw; */
 }
 
 #body-container {
-  color: red;
-  /* margin-top: 40px; */
-  /* padding-top: 40px; */
 }
 
 #landing-container {
@@ -59,7 +53,7 @@ body {
   align-items: center;
   justify-content: center;
   /* background-image: url('./resources/mountain-background.jpg'); */
-  transition: opacity 2s ease;
+  transition: opacity .25s ease;
 }
 
 #landing-inner {
@@ -74,7 +68,7 @@ body {
   /* background-image: url('./resources/mountain-background.jpg'); */
   background-size: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: all 2s ease;
+  transition: all .25s ease;
 }
 
 #landing-text {
@@ -82,7 +76,7 @@ body {
   font-size: 8vw;
   color: white;
   text-shadow: 2px 2px 2px grey;
-  transition: opacity 2s ease;
+  transition: opacity .25s ease;
 }
 
 #landing-text:hover {
@@ -114,7 +108,7 @@ body {
   right: 5vw;
   height: 50px;
   width: 50px;
-  transition: all 2s ease;
+  transition: all .25s ease;
 }
 
 #landing-square {
@@ -122,7 +116,7 @@ body {
   position: absolute;
   height: 98vh;
   width: 98vw;
-  transition: all 1s ease;
+  transition: all .25s ease;
 }
 
 @media only screen and (max-width: 600px) {

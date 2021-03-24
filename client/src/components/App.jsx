@@ -16,14 +16,14 @@ const App = () =>{
     }
     setTimeout(() => {
       setLandingStatus('exited')
-    }, 1000);
+    }, 249);
     setLandingStatus('exiting');
   };
 
   const exitingClick = () => {
     setTimeout(() => {
       setLandingStatus('entered')
-    }, 1000);
+    }, 249);
     setLandingStatus('entering');
   };
 
