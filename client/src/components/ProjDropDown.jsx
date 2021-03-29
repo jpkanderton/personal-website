@@ -6,77 +6,99 @@ const { useState, useRef } = React;
 const ProjDropDown = () => {
   const [isOpen, setOpen] = useState(false);
   const [selectedValue, setValue] = useState('');
-  const [isDDClickable, setDDClickable] = useState(false);
-  const [hrefP1, setHrefP1] = useState(null);
-  const [hrefP2, setHrefP2] = useState(null);
-  const [hrefP3, setHrefP3] = useState(null);
+  const [isSectionClickable, setSectionClickable] = useState(false);
+  const [hrefs, setHrefs] = useState({
+    section1: null,
+    section2: null,
+    section3: null
+  });
 
-  let optionItems = ['dog', 'cat', 'bird'];
-  let options = optionItems.map((item) => {
-    return <option key={item} value={item}>what is up {item}??</option>
-  })
+  let ddProject = 'dropdown-project';
 
-  let ddProject = 'dd-project';
-
-  if (isDDClickable) {
-    ddProject += ' clickable'
-  } else {
-    ddProject = 'dd-project'
+  const checkIfClickable = () => {
+    if (isSectionClickable) {
+      ddProject += ' clickable'
+    } else {
+      ddProject = 'dropdown-project'
+    }
   }
 
-  const clickOnDD = () => {
-    if (isDDClickable) {
+  checkIfClickable();
+
+  const dropdownClick = () => {
+    if (isSectionClickable) {
       console.log('DD it is clickable');
     } else {
       console.log('DD it is NOT clickable')
     }
   }
 
+  const dropdownEnter = () => {
+    setSectionClickable(true);
+    setHrefs({
+      section1: '#section-1',
+      section2: '#section-2',
+      section3: '#section-3'
+    })
+  }
+
+  const dropdownLeave = () => {
+    setSectionClickable(false);
+    setHrefs({
+      section1: null,
+      section2: null,
+      section3: null
+    })
+  }
+
   return (
-    // <>
-      <div className="grid-col-start-8" id="dropdown-container" onMouseEnter={() => {console.log('wazzup'); setDDClickable(true)}} onMouseLeave={() => {console.log('wazzup'); setDDClickable(false)}}>
-        <div id="dd-title"
-          onClick={()=> {
-            setDDClickable(true);
-            setHrefP1('#top')
-            }
-          }>
-          Projects
-        </div>
-        <div
-          className="hidden"
-          id="dd-projects-container">
-          <a className={ddProject} onClick={clickOnDD} href={hrefP1}>
-            Proj 1
-          </a>
-          <a
-            className={ddProject}
-            onClick={clickOnDD}
-            href="#top"
-
-          >
-            Proj 2
-            </a>
-          <div className={ddProject} onClick={clickOnDD}>Proj 3</div>
-        </div>
+    <a
+      className="grid-col-start-8"
+      id="dropdown-container"
+      onMouseLeave={() => {
+        console.log('Mouse Leaves');
+        setSectionClickable(false);
+        dropdownLeave();
+      }}
+      >
+      <div id="dropdown-title"
+        onClick={()=> {
+          setSectionClickable(!isSectionClickable);
+          }
+        }
+        onMouseEnter={() => {
+          dropdownEnter();
+        }}
+      >
+        Projects
       </div>
-
-    // </>
+      <div
+        className="hidden"
+        id="dropdown-projects-container">
+        <a
+          className={ddProject}
+          onClick={dropdownClick}
+          href={hrefs.section1}
+        >
+          Proj 1
+        </a>
+        <a
+          className={ddProject}
+          onClick={dropdownClick}
+          href={hrefs.section2}
+        >
+          Proj 2
+        </a>
+        <a
+          className={ddProject}
+          onClick={dropdownClick}
+          href={hrefs.section3}
+        >
+          Proj 3
+        </a>
+      </div>
+    </a>
   )
 }
 
 export default ProjDropDown;
-
-{/* <div className="custom-select-wrapper">
-<div className="custom-select">
-  <div className="custom-select__trigger"><span>Projects</span>
-      <div className="arrow"></div>
-  </div>
-  <div className="custom-options">
-    <span className="custom-option selected" value="project1">Project 1</span>
-    <span className="custom-option" value="project2">Project 2</span>
-    <span className="custom-option" value="project3">Project 3</span>
-  </div>
-</div>
-</div>
-</div> */}

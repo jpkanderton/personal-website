@@ -20,7 +20,7 @@ const Header = () =>{
       <div id="desktop-nav" className="ss-font">
         <div className="grid grid-12-columns">
           <a className="grid-col-start-2" href="#section-2" onClick={() => console.log('Home Clicked') }>John Anderton</a>
-          <a className="grid-col-start-4" href="#top">Home</a>
+          <a className="grid-col-start-4" href="#">Home</a>
           <a className="grid-col-start-6">About</a>
           {/* <a className="col-start-10 col-span-1">Projects</a> */}
           {/* <Select

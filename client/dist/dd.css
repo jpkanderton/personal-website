@@ -1,31 +1,35 @@
 #dropdown-container {
   width: 120%;
   height: 10px;
+  /* cursor: pointer; */
 }
 
-#dd-title {
+#dropdown-title {
   text-align: center;
 }
 
-#dd-title:hover {
+#dropdown-title:hover {
   text-decoration: underline;
 }
 
-#dd-projects-container {
+#dropdown-projects-container {
   height: 200px;
   width: 100%;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   z-index: -1;
+  cursor: default;
 }
 
-.dd-project {
+.dropdown-project {
   padding-top: 5px;
   opacity: 0%;
   background-color: transparent;
+  cursor: default;
 }
 
 .clickable {
   opacity: 100%;
+  cursor: pointer;
 }
