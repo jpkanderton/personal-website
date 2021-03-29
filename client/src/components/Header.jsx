@@ -22,14 +22,6 @@ const Header = () =>{
           <a className="grid-col-start-2" href="#section-2" onClick={() => console.log('Home Clicked') }>John Anderton</a>
           <a className="grid-col-start-4" href="#">Home</a>
           <a className="grid-col-start-6">About</a>
-          {/* <a className="col-start-10 col-span-1">Projects</a> */}
-          {/* <Select
-            className="col-start-10 col-span-1"
-            style={dropDownStyle}
-            defaultValue={selectedOption}
-            onChange={setSelectedOption}
-            options={options}
-          /> */}
           <ProjDropDown />
           <a className="grid-col-start-10">Contact</a>
         </div>

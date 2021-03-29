@@ -15,7 +15,7 @@ const ProjDropDown = () => {
 
   let ddProject = 'dropdown-project';
 
-  const checkIfClickable = () => {
+  const toggleClickability = () => {
     if (isSectionClickable) {
       ddProject += ' clickable'
     } else {
@@ -23,15 +23,7 @@ const ProjDropDown = () => {
     }
   }
 
-  checkIfClickable();
-
-  const dropdownClick = () => {
-    if (isSectionClickable) {
-      console.log('DD it is clickable');
-    } else {
-      console.log('DD it is NOT clickable')
-    }
-  }
+  toggleClickability();
 
   const dropdownEnter = () => {
     setSectionClickable(true);
@@ -52,7 +44,7 @@ const ProjDropDown = () => {
   }
 
   return (
-    <a
+    <div
       className="grid-col-start-8"
       id="dropdown-container"
       onMouseLeave={() => {
@@ -77,27 +69,24 @@ const ProjDropDown = () => {
         id="dropdown-projects-container">
         <a
           className={ddProject}
-          onClick={dropdownClick}
           href={hrefs.section1}
         >
           Proj 1
         </a>
         <a
           className={ddProject}
-          onClick={dropdownClick}
           href={hrefs.section2}
         >
           Proj 2
         </a>
         <a
           className={ddProject}
-          onClick={dropdownClick}
           href={hrefs.section3}
         >
           Proj 3
         </a>
       </div>
-    </a>
+    </div>
   )
 }
 
