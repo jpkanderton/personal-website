@@ -1,7 +1,10 @@
-#dd {
+#dropdown-container {
   width: 120%;
   height: 10px;
-  border: 2px solid white;
+}
+
+#dd-title {
+  text-align: center;
 }
 
 #dd-title:hover {

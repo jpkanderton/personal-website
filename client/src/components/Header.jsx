@@ -18,10 +18,10 @@ const Header = () =>{
   return (
     <div id="header-container">
       <div id="desktop-nav" className="ss-font">
-        <div className="grid grid-col-12">
-          <a className="col-start-2 col-span-3" href="#section-2" onClick={() => console.log('Home Clicked') }>John Anderton</a>
-          <a className="col-start-8 col-span-1" href="#top">Home</a>
-          <a className="col-start-9 col-span-1">About</a>
+        <div className="grid grid-12-columns">
+          <a className="grid-col-start-2" href="#section-2" onClick={() => console.log('Home Clicked') }>John Anderton</a>
+          <a className="grid-col-start-4" href="#top">Home</a>
+          <a className="grid-col-start-6">About</a>
           {/* <a className="col-start-10 col-span-1">Projects</a> */}
           {/* <Select
             className="col-start-10 col-span-1"
@@ -31,7 +31,7 @@ const Header = () =>{
             options={options}
           /> */}
           <ProjDropDown />
-          <a className="col-start-11 col-span-1">Contact</a>
+          <a className="grid-col-start-10">Contact</a>
         </div>
       </div>
     </div>

@@ -33,8 +33,8 @@ const ProjDropDown = () => {
   }
 
   return (
-    <>
-      <div className="proj-dropdown-container col-start-10 col-span-1" id="dd" onMouseEnter={() => {console.log('wazzup'); setDDClickable(true)}} onMouseLeave={() => {console.log('wazzup'); setDDClickable(false)}}>
+    // <>
+      <div className="grid-col-start-8" id="dropdown-container" onMouseEnter={() => {console.log('wazzup'); setDDClickable(true)}} onMouseLeave={() => {console.log('wazzup'); setDDClickable(false)}}>
         <div id="dd-title"
           onClick={()=> {
             setDDClickable(true);
@@ -53,6 +53,7 @@ const ProjDropDown = () => {
             className={ddProject}
             onClick={clickOnDD}
             href="#top"
+
           >
             Proj 2
             </a>
@@ -60,7 +61,7 @@ const ProjDropDown = () => {
         </div>
       </div>
 
-    </>
+    // </>
   )
 }
 
