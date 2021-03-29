@@ -29,7 +29,6 @@ const App = () =>{
 
   return (
     <>
-    {console.log('landingStatus: ', landingStatus)}
       <Home />
       <Landing landingClick={landingClick} status={landingStatus}/>
       <MainIcon status={landingStatus} landingClick={landingClick} exitingClick={exitingClick}/>
