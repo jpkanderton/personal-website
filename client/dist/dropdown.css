@@ -27,6 +27,11 @@
   opacity: 0%;
   background-color: transparent;
   cursor: default;
+  text-decoration: none;
+}
+
+.dropdown-project:hover {
+  text-decoration: underline;
 }
 
 .clickable {
