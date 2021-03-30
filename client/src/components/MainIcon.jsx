@@ -4,21 +4,24 @@ import { FaGripLines } from 'react-icons/Fa';
 
 const { useState } = React;
 
-const MainIcon = ({status, landingClick}) =>{
+const MainIcon = ({status, landingClick, aboutDisplayed}) =>{
 
   let xlcStyle = null;
-  let BsXStyle = null;
 
-  if (status === 'entered') {
-    //
-  } else {
+  if (status !== 'entered') {
     xlcStyle = xlcStyleExit;
-    BsXStyle = BsXStyleExit;
   }
 
   return (
-    <a id="main-icon-container" style={xlcStyle} onClick={landingClick} href="#top">
-      {status === 'entered' ? <BsX style={BsXStyle} size={70} color={'white'}/> : <FaGripLines size={35} color={'white'}/>}
+    <a
+      id="main-icon-container"
+      style={xlcStyle}
+      onClick={()=> {
+        landingClick();
+      }}
+      href="#top"
+      >
+      {status === 'entered' || aboutDisplayed ? <BsX size={70} color={'white'}/> : <FaGripLines size={35} color={'white'}/>}
     </a>
   )
 }
@@ -31,9 +34,9 @@ const xlcStyleExit = {
   backgroundColor: 'transparent'
 }
 
-const BsXStyleExit = {
-  opacity: '0%'
-}
+// const BsXStyleExit = {
+//   opacity: '100%'
+// }
 
 const FaGripLinesStyle = {
   color: 'white',

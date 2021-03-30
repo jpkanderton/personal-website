@@ -17,7 +17,11 @@ const App = () =>{
 
   const landingClick = () => {
     if (landingStatus === 'exited') {
-      return setLandingStatus('entered')
+      if (aboutDisplayed) {
+        return setDisplayAbout(false);
+      } else {
+        return setLandingStatus('entered')
+      }
     }
     setTimeout(() => {
       setLandingStatus('exited')
@@ -43,11 +47,14 @@ const App = () =>{
       />
       <MainIcon
         status={landingStatus}
-        landingClick={landingClick} exitingClick={exitingClick}
+        landingClick={landingClick}
+        exitingClick={exitingClick}
+        aboutDisplayed = {aboutDisplayed}
       />
       <About
         isDisplayed={aboutDisplayed}
-        hideAbout={hideAbout}/>
+        hideAbout={hideAbout}
+      />
     </>
   )
 }

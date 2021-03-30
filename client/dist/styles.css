@@ -110,6 +110,7 @@ body {
   height: 50px;
   width: 50px;
   transition: all .25s ease;
+  z-index: 3;
 }
 
 #landing-square {
