@@ -24,6 +24,7 @@ const Header = ({aboutDisplayToggle}) =>{
           <a
             className="grid-col-start-6"
             onClick={aboutDisplayToggle}
+            href="#about-container"
           >
             About
           </a>
