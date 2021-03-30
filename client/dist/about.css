@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: -1;
+  transition: 2s opacity ease-in-out;
 }
 
 #about-inner-container {

@@ -6,7 +6,7 @@ import Section3 from './body/Section3.jsx';
 
 const { useState } = React;
 
-const Body = ( {showHome} ) =>{
+const Body = () =>{
 
   return (
     <div id="body-container">

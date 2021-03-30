@@ -10,11 +10,10 @@ const { useState } = React;
 
 const App = () =>{
   const [landingStatus, setLandingStatus] = useState('entered');
-  const [displayAbout, setDisplayAbout] = useState(false);
+  const [aboutDisplayed, setDisplayAbout] = useState(false);
 
-  const displayToggle = () => {
-    setDisplayAbout(!displayAbout);
-  }
+  const displayAbout = () => setDisplayAbout(true);
+  const hideAbout = () => setDisplayAbout(false);
 
   const landingClick = () => {
     if (landingStatus === 'exited') {
@@ -36,7 +35,7 @@ const App = () =>{
   return (
     <>
       <Home
-        aboutDisplayToggle={displayToggle}
+        displayAbout={displayAbout}
       />
       <Landing
         landingClick={landingClick}
@@ -46,7 +45,9 @@ const App = () =>{
         status={landingStatus}
         landingClick={landingClick} exitingClick={exitingClick}
       />
-      <About isDisplayed={displayAbout} displayToggle={displayToggle}/>
+      <About
+        isDisplayed={aboutDisplayed}
+        hideAbout={hideAbout}/>
     </>
   )
 }

@@ -2,13 +2,13 @@ import React from 'react';
 
 const { useState } = React;
 
-const About = ({isDisplayed, displayToggle}) => {
+const About = ({isDisplayed, hideAbout}) => {
   const [show, setShow] = useState(true);
 
   return (
     <div
       id="about-container"
-      onClick= {displayToggle}
+      onClick= {hideAbout}
       style = {isDisplayed ? shown : hidden}
     >
       <div id="about-inner-container">
@@ -23,9 +23,12 @@ const About = ({isDisplayed, displayToggle}) => {
 export default About;
 
 const hidden = {
-  zIndex: -1
+  zIndex: -1,
+  opacity: '0%',
+  transform: 'translate(0px, 1000vh)',
 }
 
 const shown = {
-  zIndex: 5
+  zIndex: 5,
+  opacity: '100%'
 }

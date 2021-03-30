@@ -5,13 +5,12 @@ import Body from './Body.jsx';
 
 const { useState } = React;
 
-const Home = ({aboutDisplayToggle}) =>{
-  const [showHome, setHome] = useState(false);
+const Home = ({displayAbout}) =>{
 
   return (
     <div id="main-container">
-      <Header aboutDisplayToggle={aboutDisplayToggle}/>
-      <Body showHome = {showHome} />
+      <Header displayAbout={displayAbout}/>
+      <Body />
     </div>
   )
 }

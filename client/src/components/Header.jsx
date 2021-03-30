@@ -12,7 +12,7 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' },
 ];
 
-const Header = ({aboutDisplayToggle}) =>{
+const Header = ({displayAbout}) =>{
   const [selectedOption, setSelectedOption] = useState(null);
 
   return (
@@ -23,7 +23,7 @@ const Header = ({aboutDisplayToggle}) =>{
           <a className="grid-col-start-4" href="#">Home</a>
           <a
             className="grid-col-start-6"
-            onClick={aboutDisplayToggle}
+            onClick={displayAbout}
             href="#about-container"
           >
             About
