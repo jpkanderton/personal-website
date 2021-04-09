@@ -22,7 +22,7 @@ const Landing = ({landingClick, status}) => {
   const [line, setLine] = useState('');
 
   useEffect(()=> {
-    setLine('Welcome To the Landing Page');
+    setLine('Hey, I\'m John');
   })
 
   return (
@@ -31,6 +31,7 @@ const Landing = ({landingClick, status}) => {
       <div className="hidden-wrapper">
         <div id="landing-inner" onClick={landingClick} style={innerStyle}>
           <div id="landing-text">{line}</div>
+          <img id="landing-img" src="resources/prof-pic.png"></img>
         </div>
       </div>
     </div>
@@ -41,7 +42,7 @@ const Landing = ({landingClick, status}) => {
 export default Landing;
 
 const innerStyleExit = {
-  transform: 'translate(1000px, 0px)',
+  transform: 'translate(0px, 1000px)',
   opacity: '0%',
 }
 
@@ -57,6 +58,3 @@ const outerStyleExiting = {
 const landingSquareStyleExit = {
   opacity: '0%'
 }
-
-// BsThreeDots
-// BsX

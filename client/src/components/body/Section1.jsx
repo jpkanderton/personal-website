@@ -7,8 +7,9 @@ const Section1 = () =>{
 
   return (
     <div id="section-1" className="large-section">
-      <div className="mini-section-a"></div>
-      <div className="mini-section-b"></div>
+      <div className="large-section-grid-container"></div>
+      {/* <div className="mini-section-a"></div>
+      <div className="mini-section-b"></div> */}
     </div>
   )
 }

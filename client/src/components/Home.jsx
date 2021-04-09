@@ -5,10 +5,15 @@ import Body from './Body.jsx';
 
 const { useState } = React;
 
-const Home = ({displayAbout}) =>{
-
+const Home = ({displayAbout, landingStatus}) =>{
+  if (landingStatus === 'exited') {console.log('landingStatus exited')}
+  let mainContainerStyle = null;
+  if (landingStatus === 'entered') {
+    mainContainerStyle = homeDisplayedStyle;
+    console.log('landingStatus entered')
+  }
   return (
-    <div id="main-container">
+    <div id="main-container" style={mainContainerStyle}>
       <Header displayAbout={displayAbout}/>
       <Body />
     </div>
@@ -16,3 +21,9 @@ const Home = ({displayAbout}) =>{
 }
 
 export default Home;
+
+
+const homeDisplayedStyle = {
+  transform: 'translate(0px, -1000px)',
+  opacity: '0%',
+}

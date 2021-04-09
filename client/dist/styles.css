@@ -25,11 +25,13 @@ a:hover {
 
 body {
   overflow: hidden;
+  background-color: #EDC7B7;
 }
 
 #main-container {
   background-image: url('./resources/mountain-background.jpg');
   position: absolute;
+  width:100%;
 }
 
 #section-2-inner {
@@ -40,34 +42,27 @@ body {
 }
 
 #app {
-}
-
-#body-container {
+  background-color: #EDC7B7;
 }
 
 #landing-container {
   position: absolute;
-  background-color: black;
+  background-color: #EDC7B7;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url('./resources/mountain-background.jpg'); */
   transition: opacity .25s ease;
 }
 
 #landing-inner {
-  background-color: black;
+  display: relative;
+  background-color: #e9bfad;
   border: 2px solid white;
   height: 500px;
   width: 500px;
   min-width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background-image: url('./resources/mountain-background.jpg'); */
-  background-size: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: all .25s ease;
 }
@@ -76,12 +71,25 @@ body {
   text-align: center;
   font-size: 8vw;
   color: white;
-  text-shadow: 2px 2px 2px grey;
-  transition: opacity .25s ease;
+  /* text-shadow: 2px 2px 2px #ac3B61; */
+  transition: all 2s ease;
 }
 
 #landing-text:hover {
-  opacity: 0%;
+  color: #7b6359;
+  text-shadow: 2px 2px 2px #e9bfad;
+}
+
+#landing-img {
+  height: 250px;
+  width: 250px;
+  padding: 10px;
+  position: absolute;
+  transition: all .5s ease-in-out;
+}
+
+#landing-img:hover {
+  transform: scale(1.1);
 }
 
 #black-screen {
@@ -136,14 +144,6 @@ body {
 
   #landing-text {
     font-size: 85.28px;
-  }
-
-}
-
-@media only screen and (max-width: 530px) {
-
-  .large-section {
-    padding-top: 76px;
   }
 
 }

@@ -39,6 +39,7 @@ const App = () =>{
   return (
     <>
       <Home
+        landingStatus={landingStatus}
         displayAbout={displayAbout}
       />
       <Landing
