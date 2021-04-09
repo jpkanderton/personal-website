@@ -1,6 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+// fa-paper-plane"
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+
 
 const { useState, useEffect } = React;
+// const element = <FontAwesomeIcon icon={faCoffee} />
 let count = 0;
 
 const Landing = ({landingClick, status}) => {
@@ -32,6 +38,20 @@ const Landing = ({landingClick, status}) => {
         <div id="landing-inner" onClick={landingClick} style={innerStyle}>
           <div id="landing-text">{line}</div>
           <img id="landing-img" src="resources/prof-pic.png"></img>
+          <div id="landing-icon-bar">
+            <div className="landing-icon-container">
+              <FontAwesomeIcon icon={faGithub} />
+            </div>
+            <div className="landing-icon-container">
+              <FontAwesomeIcon icon={faGithub} />
+            </div>
+            <div className="landing-icon-container">
+              <FontAwesomeIcon icon={faPaperPlane} />
+            </div>
+            <div className="landing-icon-container">
+            <FontAwesomeIcon icon={faTwitter} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
