@@ -35,7 +35,6 @@ body {
 }
 
 #section-2-inner {
-  background-color: purple;
   margin-top: 40px;
   height: 200px;
   width: 100%
@@ -47,7 +46,6 @@ body {
 
 #landing-container {
   position: absolute;
-  background-color: #EDC7B7;
   height: 100%;
   width: 100%;
   display: flex;
@@ -58,7 +56,6 @@ body {
 
 #landing-inner {
   position: relative;
-  background-color: #e9bfad;
   border: 2px solid white;
   height: 500px;
   width: 500px;
@@ -86,11 +83,13 @@ body {
   width: 250px;
   padding: 10px;
   position: absolute;
+  left: 25%;
+
   transition: all .5s ease-in-out;
 }
 
 #landing-img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #landing-icon-bar {
@@ -106,16 +105,20 @@ body {
 .landing-icon-container {
   height: 100%;
   width: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: transform .7s ease-in;
 
 }
 
-#black-screen {
-  background-color: black;
-  height: 100vh;
-  width: 100px;
+.landing-icon-container:hover {
+  transform: rotate(360deg);
+}
+
+.faIcon {
+  transition: transform .7s ease-in-out;
+}
+
+.faIcon:hover {
+  transform: rotate(360deg);
 }
 
 .hidden-wrapper {
@@ -130,9 +133,6 @@ body {
 
 #main-icon-container {
   position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   top: 50px;
   right: 5vw;
   height: 50px;
@@ -149,21 +149,32 @@ body {
   transition: all .25s ease;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: #e9bfad;
-  }
-
-  #landing-text {
-    font-size: 100px;
-  }
-
+.bckgrnd-tan-prmry {
+  background-color: #EDC7B7;
 }
 
-@media only screen and (min-width: 1066px) {
+.bckgrnd-tan-drkr {
+  background-color: #E9BFAD;
+}
 
-  #landing-text {
-    font-size: 100px;
-  }
+.bckgrnd-pink-prmry {
+  background-color: #EEE2DC;
+}
 
+.bckgrnd-grey-prmry {
+  background-color: #BAB2B5;
+}
+
+.bckgrnd-blue-prmry {
+  background-color: #123C69;
+}
+
+.bckgrnd-red-prmry {
+  background-color: #AC3B61;
+}
+
+.cntr-w-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -35,21 +35,36 @@ const Landing = ({landingClick, status}) => {
     <div id="landing-container" style={outerStyle}>
       <div id="landing-square"></div>
       <div className="hidden-wrapper">
-        <div id="landing-inner" onClick={landingClick} style={innerStyle}>
+        <div
+          id="landing-inner"
+          className="bckgrnd-tan-drkr"
+          onClick={landingClick} style={innerStyle}>
           <div id="landing-text">{line}</div>
           <img id="landing-img" src="resources/prof-pic.png"></img>
           <div id="landing-icon-bar">
-            <div className="landing-icon-container">
-              <FontAwesomeIcon icon={faGithub} />
+            <div className="landing-icon-container cntr-w-flex">
+              <FontAwesomeIcon
+                className="faIcon"
+                icon={faGithub}
+                size='3x'
+                // color="white"
+                color="#123C69"
+              />
             </div>
-            <div className="landing-icon-container">
-              <FontAwesomeIcon icon={faGithub} />
+            <div className="landing-icon-container cntr-w-flex">
+              <FontAwesomeIcon
+                icon={faPaperPlane}
+                size='3x'
+                // color="#123C69"
+                color="#AC3B61"
+              />
             </div>
-            <div className="landing-icon-container">
-              <FontAwesomeIcon icon={faPaperPlane} />
-            </div>
-            <div className="landing-icon-container">
-            <FontAwesomeIcon icon={faTwitter} />
+            <div className="landing-icon-container cntr-w-flex">
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                size='3x'
+                color="#123C69"
+              />
             </div>
           </div>
         </div>

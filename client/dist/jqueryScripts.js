@@ -23,8 +23,3 @@ $( ".grid-col-start-6" ).click(function() {
 
 
 //
-
-// $("#landing-img").hover(function(){
-//   $("#landing-img").css("height", '250px');
-//   $("#landing-img").css("width", '250px');
-// })

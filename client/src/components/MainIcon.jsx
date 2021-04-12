@@ -15,6 +15,7 @@ const MainIcon = ({status, landingClick, aboutDisplayed}) =>{
   return (
     <a
       id="main-icon-container"
+      className="cntr-w-flex"
       style={xlcStyle}
       onClick={()=> {
         landingClick();
