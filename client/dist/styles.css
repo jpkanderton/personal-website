@@ -64,6 +64,10 @@ body {
   transition: all .25s ease;
 }
 
+#landing-inner:hover {
+  /* transform: scale(1.5); */
+}
+
 #landing-text {
   position: absolute;
   text-align: center;
@@ -184,9 +188,31 @@ h1 {
 }
 
 h2 {
-  //
+  font-family: 'Montserrat', sans-serif;
 }
+
 
 #landing-title-1 {
   position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+}
+
+#landing-title-2 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 60%;
+}
+
+#learn-more-container {
+  position: absolute;
+  border: 1px solid white;
+  height: 50px;
+  width: 180px;
+  top: 67%;
+  left: 0;
+  right: 0;
+  margin: auto
 }
