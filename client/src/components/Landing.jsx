@@ -40,6 +40,7 @@ const Landing = ({landingClick, status}) => {
           className="bckgrnd-tan-drkr"
           onClick={landingClick} style={innerStyle}>
           <div id="landing-text">{line}</div>
+          <h1 id="landing-title-1">Software Engineer</h1>
           <img id="landing-img" src="resources/prof-pic.png"></img>
           <div id="landing-icon-bar">
             <div className="landing-icon-container cntr-w-flex">
