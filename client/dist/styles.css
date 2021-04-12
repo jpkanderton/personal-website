@@ -161,6 +161,10 @@ body {
   background-color: #E9BFAD;
 }
 
+.bckgrnd-tan-drkrst {
+  background-color: #c9a494;
+}
+
 .bckgrnd-pink-prmry {
   background-color: #EEE2DC;
 }
@@ -191,6 +195,13 @@ h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
 
 #landing-title-1 {
   position: absolute;
@@ -214,5 +225,23 @@ h2 {
   top: 67%;
   left: 0;
   right: 0;
-  margin: auto
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex
+}
+
+#learn-more-container:hover {
+  background-color: #c9a494;
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
 }

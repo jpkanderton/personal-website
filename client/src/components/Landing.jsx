@@ -42,7 +42,9 @@ const Landing = ({landingClick, status}) => {
           <div id="landing-text">{line}</div>
           <h1 id="landing-title-1">Software Engineer</h1>
           <h2 id="landing-title-2">I build things</h2>
-          <div id="learn-more-container"></div>
+          <div id="learn-more-container" className="center-text">
+            <p>View My Work →</p>
+          </div>
           <img id="landing-img" src="resources/prof-pic.png"></img>
           <div id="landing-icon-bar">
             <div className="landing-icon-container cntr-w-flex">
