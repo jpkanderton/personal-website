@@ -38,14 +38,20 @@ const Landing = ({landingClick, status}) => {
         <div
           id="landing-inner"
           className="bckgrnd-tan-drkr"
-          onClick={landingClick} style={innerStyle}>
-          <div id="landing-text">{line}</div>
-          <h1 id="landing-title-1">Software Engineer</h1>
-          <h2 id="landing-title-2">I build things</h2>
-          <div id="learn-more-container" className="center-text">
-            <p>View My Work →</p>
-          </div>
+          style={innerStyle}>
           <img id="landing-img" src="resources/prof-pic.png"></img>
+          <h1 id="landing-title-1">Hi, I'm John</h1>
+          <h6
+            id="landing-title-2"
+            className="cursor-arrow"
+          >
+            I'm a software engineer and I like to build things</h6>
+          <div
+            id="learn-more-container" className="center-text cursor-pointer"
+            onClick={landingClick}
+          >
+            <p className="cursor-pointer">View My Work →</p>
+          </div>
           <div id="landing-icon-bar">
             <div className="landing-icon-container cntr-w-flex">
               <FontAwesomeIcon
@@ -54,6 +60,7 @@ const Landing = ({landingClick, status}) => {
                 size='3x'
                 // color="white"
                 color="#123C69"
+                className="cursor-pointer"
               />
             </div>
             <div className="landing-icon-container cntr-w-flex">
@@ -62,6 +69,8 @@ const Landing = ({landingClick, status}) => {
                 size='3x'
                 // color="#123C69"
                 color="#AC3B61"
+                className="cursor-pointer"
+
               />
             </div>
             <div className="landing-icon-container cntr-w-flex">
@@ -69,6 +78,7 @@ const Landing = ({landingClick, status}) => {
                 icon={faLinkedin}
                 size='3x'
                 color="#123C69"
+                className="cursor-pointer"
               />
             </div>
           </div>

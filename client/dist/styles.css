@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  cursor: default;
 }
 
 html {
@@ -59,7 +61,6 @@ body {
   border: 2px solid white;
   height: 500px;
   width: 500px;
-  min-width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: all .25s ease;
 }
@@ -97,7 +98,7 @@ body {
 }
 
 #landing-icon-bar {
-  height: 20%;
+  height: 100px;
   width: 100%;
   position: absolute;
   top: 400px;
@@ -109,6 +110,7 @@ body {
 .landing-icon-container {
   height: 100%;
   width: 25%;
+  cursor: pointer;
   transition: transform .7s ease-in;
 
 }
@@ -117,13 +119,9 @@ body {
   transform: rotate(360deg);
 }
 
-.faIcon {
-  transition: transform .7s ease-in-out;
-}
-
-.faIcon:hover {
+/* .faIcon:hover {
   transform: rotate(360deg);
-}
+} */
 
 .hidden-wrapper {
   overflow: hidden;
@@ -189,18 +187,25 @@ body {
 
 h1 {
   font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
-h2 {
-  font-family: 'Montserrat', sans-serif;
+h6 {
+  color: white;
 }
 
 p {
   font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 #landing-title-1 {
@@ -228,7 +233,6 @@ p {
   margin: auto;
   text-align: center;
   display: flex;
-  flex
 }
 
 #learn-more-container:hover {
@@ -244,4 +248,62 @@ p {
 
 .montserrat {
   font-family: 'Montserrat', sans-serif;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-arrow {
+  cursor: default;
+}
+
+@media only screen and (max-width: 509px) {
+
+  #landing-inner {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    transition: all .25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #landing-text {
+    position: relative;
+    height: auto;
+  }
+
+  #landing-img {
+    position: relative;
+    height: auto;
+    left: auto;
+  }
+
+  #landing-icon-bar {
+    position: relative;
+    top: auto;
+    height: 100px
+  }
+
+  #landing-title-1 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 10px;
+  }
+
+  #landing-title-2 {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  #learn-more-container {
+    position: relative;
+    margin: 10px;
+  }
 }
