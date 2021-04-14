@@ -11,8 +11,12 @@ const Contact = () => {
       // style = {isDisplayed ? shown : hidden}
     >
       <div id="contact-main-container">
-        <ContactForm />
-        <ContactAdditional />
+        <div>
+          <ContactForm />
+        </div>
+        <div>
+          <ContactAdditional />
+        </div>
       </div>
     </div>
   )
@@ -42,22 +46,25 @@ const ContactForm = () => {
 
   return (
     <div
-      id="contact-form-container"
       className="contact-containers"
     >
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form
+        id="contact-form-container"
+        className="contact-form-form"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <input
+          className="contact-input"
           type="text"
           placeholder="Your Name"
-          className="contact-input"
           {...register("name", {
             required: true
           })}
         />
         <input
+          className="contact-input"
           type="text"
           placeholder="Email"
-          className="contact-input"
           {...register("email", {
             required: true,
             // pattern:  /^\S+@\S+$/i
@@ -65,14 +72,18 @@ const ContactForm = () => {
           })}
         />
         <input
+          className="contact-input"
           type="text"
           placeholder="Type your message here"
-          className="contact-input"
           {...register("message", {
             required: true
           })}
         />
-        <input type="submit" />
+        <input
+          id="send"
+          type="submit"
+          value="send"
+        />
       </form>
     </div>
   )

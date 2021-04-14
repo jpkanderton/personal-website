@@ -1,26 +1,28 @@
 #contact-page-container {
+  min-height: 800px;
+  height: 100vh;
 }
 
 #contact-main-container {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 25%;
   padding-left: 10%;
   padding-right: 10%;
   height: 100%;
   width: 100%;
   border: 2px solid white;
   display: grid;
-  grid-template-columns: auto 1fr 1fr auto;
+  grid-template-columns: 50% 50%;
 }
 
 .contact-containers {
-  border: 2px solid white;
+  /* border: 2px solid white;
   height: 300px;
-  width: 300px;
+  width: 300px; */
 }
 
 #contact-form-container {
-
+  display: flex;
+  flex-direction: column;
 }
 
 #contact-additional-container {
@@ -28,5 +30,22 @@
 }
 
 .contact-input {
-  width: "100%"
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  width: auto;
+  font-size: 2vw;
+  outline: none;
+}
+
+#send {
+
+}
+
+form {
+  //
+}
+
+input {
+  //
 }
