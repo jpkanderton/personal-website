@@ -4,7 +4,7 @@
 }
 
 #contact-main-container {
-  padding-top: 25%;
+  padding-top: 25vh;
   padding-left: 10%;
   padding-right: 10%;
   height: 100%;
@@ -34,12 +34,33 @@
   border: none;
   border-bottom: 1px solid white;
   width: auto;
+  margin-bottom: 2vw;
   font-size: 2vw;
+  width: 30vw;
   outline: none;
 }
 
-#send {
+#contact-input-large {
+  height: 30vw;
+  padding-bottom: 25vw;
+  padding-left: 1vw;
+  border: 1px solid white;
+}
 
+#send {
+  width: 10vw;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  height: 6vw;
+  font-size: 2vw;
+  border: none;
+  padding-top;
+}
+
+#send:hover {
+  width: 10vw;
+  background-color: rgb(176, 143, 143);
+  border-bottom: 1px solid black;
 }
 
 form {

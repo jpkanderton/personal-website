@@ -72,6 +72,7 @@ const ContactForm = () => {
           })}
         />
         <input
+          id="contact-input-large"
           className="contact-input"
           type="text"
           placeholder="Type your message here"
@@ -82,7 +83,7 @@ const ContactForm = () => {
         <input
           id="send"
           type="submit"
-          value="send"
+          value="Send"
         />
       </form>
     </div>
