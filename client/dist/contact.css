@@ -1,0 +1,32 @@
+#contact-page-container {
+}
+
+#contact-main-container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100%;
+  width: 100%;
+  border: 2px solid white;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr auto;
+}
+
+.contact-containers {
+  border: 2px solid white;
+  height: 300px;
+  width: 300px;
+}
+
+#contact-form-container {
+
+}
+
+#contact-additional-container {
+
+}
+
+.contact-input {
+  width: "100%"
+}
