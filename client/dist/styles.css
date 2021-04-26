@@ -112,7 +112,6 @@ body {
   width: 25%;
   cursor: pointer;
   transition: transform .7s ease-in;
-
 }
 
 .landing-icon-container:hover {

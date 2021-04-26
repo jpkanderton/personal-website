@@ -1,6 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 const { useState } = React;
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = () => {
 // const Contact = ({isDisplayed}) => {
@@ -96,6 +99,52 @@ const ContactAdditional = () => {
       id="contact-additional-container"
       className="contact-containers"
     >
+      <div
+        // className=""
+        id="contact-additional-note-container"
+      >
+        <p className="contact-page-font contact-page-note-font">I'd love to chat about any opportunities or just reach out to say hi!</p>
+      </div>
+      <div
+        // className=""
+        id="contact-additional-email-container"
+      >
+        <p className="contact-page-font contact-page-email-font">john.pk.anderton@gmail.com</p>
+      </div>
+      <div
+        id="contact-additional-socials-container"
+      >
+        <div id="contact-icon-bar">
+          <div className="contact-icon-container cntr-w-flex">
+            <FontAwesomeIcon
+              className="faIcon"
+              icon={faGithub}
+              size='3x'
+              // color="white"
+              color="black"
+              className="cursor-pointer"
+            />
+          </div>
+          <div className="contact-icon-container cntr-w-flex">
+            <FontAwesomeIcon
+              icon={faPaperPlane}
+              size='3x'
+              // color="#123C69"
+              color="black"
+              className="cursor-pointer"
+
+            />
+          </div>
+          <div className="contact-icon-container cntr-w-flex">
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              size='3x'
+              color="black"
+              className="cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
