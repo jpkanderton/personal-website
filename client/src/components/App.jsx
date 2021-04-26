@@ -19,6 +19,12 @@ const App = () =>{
   const displayHome = () => setDisplayHome(true);
   const hideHome = () => setDisplayHome(false);
 
+  const nameClick = () => {
+    setDisplayMainIcon(true);
+    setDisplayHome(false);
+    setLandingStatus('entered');
+  }
+
   const aboutClick = () => {
     setDisplayAbout(true);
     setDisplayHome(false);

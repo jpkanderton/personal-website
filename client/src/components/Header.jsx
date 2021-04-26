@@ -19,7 +19,12 @@ const Header = ({aboutClick, displayContact, homeClick}) =>{
     <div id="header-container">
       <div id="desktop-nav" className="ss-font">
         <div className="grid grid-12-columns">
-          <a className="grid-col-start-2" href="#section-2" onClick={() => console.log('Home Clicked') }>John Anderton</a>
+          <a
+            className="grid-col-start-2"
+            onClick={homeClick}
+          >
+            John Anderton
+          </a>
           <a
             className="grid-col-start-4"
             onClick={homeClick}
