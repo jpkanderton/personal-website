@@ -21,17 +21,19 @@ const App = () =>{
 
   const nameClick = () => {
     setDisplayMainIcon(true);
+    setDisplayMainIcon(true);
     setDisplayHome(false);
     setLandingStatus('entered');
   }
 
   const aboutClick = () => {
+    setDisplayMainIcon(true);
     setDisplayAbout(true);
     setDisplayHome(false);
   };
   const hideAbout = () => setDisplayAbout(false);
   const displayContact = () => {
-    console.log('setting display contact to false')
+    setDisplayMainIcon(true);
     setDisplayHome(false);
     setDisplayContact(true);
   }
@@ -41,6 +43,7 @@ const App = () =>{
   };
 
   const mainIconClick = () => {
+    setDisplayMainIcon(false);
     if (landingStatus === 'exited') {
       if (aboutDisplayed) {
         setDisplayAbout(false);
@@ -94,6 +97,7 @@ const App = () =>{
         exitingClick={exitingClick}
         aboutDisplayed = {aboutDisplayed}
         contactDisplayed = {contactDisplayed}
+        displayMainIcon = {displayMainIcon}
       />
       <About
         isDisplayed={aboutDisplayed}

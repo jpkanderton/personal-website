@@ -4,7 +4,9 @@ import { FaGripLines } from 'react-icons/Fa';
 
 const { useState } = React;
 
-const MainIcon = ({status, mainIconClick, aboutDisplayed, contactDisplayed}) =>{
+const MainIcon = ({status, mainIconClick, aboutDisplayed, contactDisplayed, displayMainIcon}) =>{
+
+  if (!displayMainIcon) return null;
 
   let xlcStyle = null;
 
@@ -23,7 +25,7 @@ const MainIcon = ({status, mainIconClick, aboutDisplayed, contactDisplayed}) =>{
       href="#top"
       >
       {/* {status === 'entered' || aboutDisplayed || contactDisplayed ? <BsX size={70} color={'white'}/> : <FaGripLines size={35} color={'white'}/>} */}
-      {status === 'entered' || aboutDisplayed || contactDisplayed ? <BsX size={70} color={'white'}/> : <FaGripLines size={35} color={'white'}/>}
+      <BsX size={70} color={'white'}/>
     </a>
   )
 }
