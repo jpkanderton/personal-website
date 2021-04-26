@@ -12,7 +12,7 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' },
 ];
 
-const Header = ({displayAbout, displayContact, homeClick}) =>{
+const Header = ({aboutClick, displayContact, homeClick}) =>{
   const [selectedOption, setSelectedOption] = useState(null);
 
   return (
@@ -29,7 +29,7 @@ const Header = ({displayAbout, displayContact, homeClick}) =>{
           </a>
           <a
             className="grid-col-start-6"
-            onClick={displayAbout}
+            onClick={aboutClick}
             href="#about-container"
           >
             About

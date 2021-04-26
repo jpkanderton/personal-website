@@ -19,7 +19,10 @@ const App = () =>{
   const displayHome = () => setDisplayHome(true);
   const hideHome = () => setDisplayHome(false);
 
-  const displayAbout = () => setDisplayAbout(true);
+  const aboutClick = () => {
+    setDisplayAbout(true);
+    setDisplayHome(false);
+  };
   const hideAbout = () => setDisplayAbout(false);
   const displayContact = () => {
     console.log('setting display contact to false')
@@ -34,7 +37,9 @@ const App = () =>{
   const mainIconClick = () => {
     if (landingStatus === 'exited') {
       if (aboutDisplayed) {
-        return setDisplayAbout(false);
+        setDisplayAbout(false);
+        setDisplayHome(true);
+        return;
       } else {
         if(!homeDisplayed) {
           setDisplayHome(true);
@@ -68,7 +73,7 @@ const App = () =>{
     <>
       <Home
         landingStatus={landingStatus}
-        displayAbout={displayAbout}
+        aboutClick={aboutClick}
         displayContact={displayContact}
         homeDisplayed={homeDisplayed}
         homeClick={homeClick}
