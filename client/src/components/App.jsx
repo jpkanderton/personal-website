@@ -13,7 +13,7 @@ const App = () =>{
   const [landingStatus, setLandingStatus] = useState('entered');
   const [aboutDisplayed, setDisplayAbout] = useState(false);
   const [contactDisplayed, setDisplayContact] = useState(false);
-  const [homeDisplayed, setDisplayHome] = useState(true);
+  const [homeDisplayed, setDisplayHome] = useState(false);
   const [displayMainIcon, setDisplayMainIcon] = useState(true);
 
   const displayHome = () => setDisplayHome(true);
@@ -45,6 +45,7 @@ const App = () =>{
       }
     }
     setTimeout(() => {
+      setDisplayHome(true)
       setLandingStatus('exited')
     }, 249);
     setLandingStatus('exiting');
@@ -52,6 +53,7 @@ const App = () =>{
 
   const homeClick = () => {
     setDisplayMainIcon(true);
+    setDisplayHome(false);
     setLandingStatus('entered');
   };
 
