@@ -8,7 +8,7 @@ const { useState, useEffect } = React;
 // const element = <FontAwesomeIcon icon={faCoffee} />
 let count = 0;
 
-const Landing = ({landingClick, status}) => {
+const Landing = ({mainIconClick, status}) => {
 
   let outerStyle = null;
   let innerStyle = null;
@@ -47,7 +47,7 @@ const Landing = ({landingClick, status}) => {
             I'm a software engineer and I like to build things</h6>
           <div
             id="learn-more-container" className="center-text cursor-pointer"
-            onClick={landingClick}
+            onClick={mainIconClick}
           >
             <p className="cursor-pointer">View My Work →</p>
           </div>

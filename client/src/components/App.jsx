@@ -14,6 +14,7 @@ const App = () =>{
   const [aboutDisplayed, setDisplayAbout] = useState(false);
   const [contactDisplayed, setDisplayContact] = useState(false);
   const [homeDisplayed, setDisplayHome] = useState(true);
+  const [displayMainIcon, setDisplayMainIcon] = useState(true);
 
   const displayHome = () => setDisplayHome(true);
   const hideHome = () => setDisplayHome(false);
@@ -30,7 +31,7 @@ const App = () =>{
     setDisplayContact(false)
   };
 
-  const landingClick = () => {
+  const mainIconClick = () => {
     if (landingStatus === 'exited') {
       if (aboutDisplayed) {
         return setDisplayAbout(false);
@@ -39,7 +40,7 @@ const App = () =>{
           setDisplayHome(true);
           setDisplayContact(false);
         };
-        setLandingStatus('entered');
+        // setLandingStatus('entered');
         return;
       }
     }
@@ -47,6 +48,11 @@ const App = () =>{
       setLandingStatus('exited')
     }, 249);
     setLandingStatus('exiting');
+  };
+
+  const homeClick = () => {
+    setDisplayMainIcon(true);
+    setLandingStatus('entered');
   };
 
   const exitingClick = () => {
@@ -63,14 +69,15 @@ const App = () =>{
         displayAbout={displayAbout}
         displayContact={displayContact}
         homeDisplayed={homeDisplayed}
+        homeClick={homeClick}
       />
       <Landing
-        landingClick={landingClick}
+        mainIconClick={mainIconClick}
         status={landingStatus}
       />
       <MainIcon
         status={landingStatus}
-        landingClick={landingClick}
+        mainIconClick={mainIconClick}
         exitingClick={exitingClick}
         aboutDisplayed = {aboutDisplayed}
         contactDisplayed = {contactDisplayed}

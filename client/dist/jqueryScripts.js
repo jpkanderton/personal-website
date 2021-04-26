@@ -9,13 +9,16 @@ $( "#main-icon-container" ).click(function() {
 });
 
 // DESCRIPTION on click of the "about" div element (denoted by the grid-col-start class), the body element's overflow is hidden / visible
-$( ".grid-col-start-6" ).click(function() {
-  if( $("body").css('overflow') == 'visible') {
-    $("body").css("overflow", "hidden");
-  } else {
-    $("body").css("overflow", "visible");
-  }
+// $( ".grid-col-start-6" ).click(function() {
+//   if( $("body").css('overflow') == 'visible') {
+//     $("body").css("overflow", "hidden");
+//   } else {
+//     $("body").css("overflow", "visible");
+//   }
+// });
+
+
+
+$( ".grid-col-start-4" ).click(function() {
+  $("body").css("overflow", "hidden");
 });
-
-
-//

@@ -5,7 +5,7 @@ import Body from './Body.jsx';
 
 const { useState } = React;
 
-const Home = ({displayAbout, displayContact, landingStatus, homeDisplayed}) =>{
+const Home = ({displayAbout, displayContact, landingStatus, homeDisplayed, homeClick}) =>{
   if (!homeDisplayed) return null;
   if (landingStatus === 'exited') {console.log('landingStatus exited')}
   let mainContainerStyle = null;
@@ -18,6 +18,7 @@ const Home = ({displayAbout, displayContact, landingStatus, homeDisplayed}) =>{
       <Header
         displayAbout={displayAbout}
         displayContact={displayContact}
+        homeClick={homeClick}
       />
       <Body />
     </div>

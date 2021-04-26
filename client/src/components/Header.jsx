@@ -12,7 +12,7 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' },
 ];
 
-const Header = ({displayAbout, displayContact}) =>{
+const Header = ({displayAbout, displayContact, homeClick}) =>{
   const [selectedOption, setSelectedOption] = useState(null);
 
   return (
@@ -20,7 +20,13 @@ const Header = ({displayAbout, displayContact}) =>{
       <div id="desktop-nav" className="ss-font">
         <div className="grid grid-12-columns">
           <a className="grid-col-start-2" href="#section-2" onClick={() => console.log('Home Clicked') }>John Anderton</a>
-          <a className="grid-col-start-4" href="#">Home</a>
+          <a
+            className="grid-col-start-4"
+            onClick={homeClick}
+            href="#"
+          >
+            Home
+          </a>
           <a
             className="grid-col-start-6"
             onClick={displayAbout}
