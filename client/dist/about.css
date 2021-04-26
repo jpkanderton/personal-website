@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   transition: .25s opacity ease-in-out;
 }
