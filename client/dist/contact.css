@@ -84,8 +84,8 @@ input {
 }
 
 #contact-additional-email-container {
-  padding-top: 4vw;
-  padding-bottom: 4vw;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 
 .contact-icon-container {
@@ -107,7 +107,7 @@ input {
   }
 
   #contact-additional-container {
-    padding-bottom: 20px;
+    padding-bottom: 4vh;
   }
 
   #contact-form-container {
