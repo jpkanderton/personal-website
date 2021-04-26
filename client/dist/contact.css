@@ -50,17 +50,16 @@
 }
 
 #send {
-  width: 10vw;
+  width: 80px;
   background-color: transparent;
   border-bottom: 2px solid white;
-  height: 6vw;
-  font-size: 2vw;
+  height: 6vh;
+  font-size: 20px;
   border: none;
-  /* padding-top; */
+  /* padding-bottom: 25vh; */
 }
 
 #send:hover {
-  width: 10vw;
   background-color: rgb(176, 143, 143);
   border-bottom: 1px solid black;
 }
@@ -106,6 +105,10 @@ input {
 @media only screen and (max-width: 509px) {
   #contact-main-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  #contact-additional-container {
+    padding-bottom: 40px;
   }
 }
