@@ -1,13 +1,16 @@
 #contact-page-container {
-  min-height: 800px;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: #EDC7B7;
+  position: absolute;
+  overflow: hidden;
+  transition: .25s opacity ease-in-out;
 }
 
 #contact-main-container {
   padding-top: 25vh;
   padding-left: 10%;
   padding-right: 10%;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   border: 2px solid white;
   display: grid;
@@ -104,6 +107,7 @@ input {
   #contact-main-container {
     display: flex;
     flex-direction: column-reverse;
+    padding-top: 4vh;
   }
 
   #contact-additional-container {
@@ -112,9 +116,5 @@ input {
 
   #contact-form-container {
     padding-bottom: 30px;
-  }
-
-  body {
-    overflow: scroll;
   }
 }

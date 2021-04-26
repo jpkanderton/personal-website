@@ -12,16 +12,35 @@ const { useState } = React;
 const App = () =>{
   const [landingStatus, setLandingStatus] = useState('entered');
   const [aboutDisplayed, setDisplayAbout] = useState(false);
+  const [contactDisplayed, setDisplayContact] = useState(false);
+  const [homeDisplayed, setDisplayHome] = useState(true);
+
+  const displayHome = () => setDisplayHome(true);
+  const hideHome = () => setDisplayHome(false);
 
   const displayAbout = () => setDisplayAbout(true);
   const hideAbout = () => setDisplayAbout(false);
+  const displayContact = () => {
+    console.log('setting display contact to false')
+    setDisplayHome(false);
+    setDisplayContact(true);
+  }
+  const hideContact = () => {
+    console.log('setting display contact to false')
+    setDisplayContact(false)
+  };
 
   const landingClick = () => {
     if (landingStatus === 'exited') {
       if (aboutDisplayed) {
         return setDisplayAbout(false);
       } else {
-        return setLandingStatus('entered')
+        if(!homeDisplayed) {
+          setDisplayHome(true);
+          setDisplayContact(false);
+        };
+        setLandingStatus('entered');
+        return;
       }
     }
     setTimeout(() => {
@@ -39,9 +58,11 @@ const App = () =>{
 
   return (
     <>
-      {/* <Home
+      <Home
         landingStatus={landingStatus}
         displayAbout={displayAbout}
+        displayContact={displayContact}
+        homeDisplayed={homeDisplayed}
       />
       <Landing
         landingClick={landingClick}
@@ -52,12 +73,16 @@ const App = () =>{
         landingClick={landingClick}
         exitingClick={exitingClick}
         aboutDisplayed = {aboutDisplayed}
+        contactDisplayed = {contactDisplayed}
       />
       <About
         isDisplayed={aboutDisplayed}
         hideAbout={hideAbout}
-      /> */}
-      <Contact />
+      />
+      <Contact
+        isDisplayed={contactDisplayed}
+        hideContact={hideContact}
+      />
     </>
   )
 }

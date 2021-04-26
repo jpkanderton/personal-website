@@ -12,7 +12,7 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' },
 ];
 
-const Header = ({displayAbout}) =>{
+const Header = ({displayAbout, displayContact}) =>{
   const [selectedOption, setSelectedOption] = useState(null);
 
   return (
@@ -29,7 +29,12 @@ const Header = ({displayAbout}) =>{
             About
           </a>
           <ProjDropDown />
-          <a className="grid-col-start-10">Contact</a>
+          <a
+            className="grid-col-start-10"
+            onClick={displayContact}
+          >
+            Contact
+          </a>
         </div>
       </div>
     </div>

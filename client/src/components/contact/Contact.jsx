@@ -5,13 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-const Contact = () => {
+const Contact = ({isDisplayed}) => {
 // const Contact = ({isDisplayed}) => {
-
+  console.log('isdisplayed: ', isDisplayed)
+  if (isDisplayed){
   return (
     <div
       id="contact-page-container"
-      // style = {isDisplayed ? shown : hidden}
+      style = {isDisplayed ? shown : hidden}
     >
       <div id="contact-main-container">
         <div>
@@ -24,19 +25,21 @@ const Contact = () => {
     </div>
   )
 }
+else {return null}
+}
 
 export default Contact;
 
-// const hidden = {
-//   zIndex: -1,
-//   opacity: '0%',
-//   // transform: 'translate(0px, 100vh)'
-// }
+const hidden = {
+  zIndex: -1,
+  opacity: '0%',
+  // transform: 'translate(0px, 100vh)'
+}
 
-// const shown = {
-//   zIndex: 2,
-//   opacity: '100%'
-// }
+const shown = {
+  zIndex: 2,
+  opacity: '100%'
+}
 
 
 const ContactForm = () => {

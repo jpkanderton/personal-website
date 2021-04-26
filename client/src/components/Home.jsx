@@ -5,7 +5,8 @@ import Body from './Body.jsx';
 
 const { useState } = React;
 
-const Home = ({displayAbout, landingStatus}) =>{
+const Home = ({displayAbout, displayContact, landingStatus, homeDisplayed}) =>{
+  if (!homeDisplayed) return null;
   if (landingStatus === 'exited') {console.log('landingStatus exited')}
   let mainContainerStyle = null;
   if (landingStatus === 'entered') {
@@ -14,7 +15,10 @@ const Home = ({displayAbout, landingStatus}) =>{
   }
   return (
     <div id="main-container" style={mainContainerStyle}>
-      <Header displayAbout={displayAbout}/>
+      <Header
+        displayAbout={displayAbout}
+        displayContact={displayContact}
+      />
       <Body />
     </div>
   )
