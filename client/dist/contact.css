@@ -113,4 +113,8 @@ input {
   #contact-form-container {
     padding-bottom: 30px;
   }
+
+  body {
+    overflow: scroll;
+  }
 }
