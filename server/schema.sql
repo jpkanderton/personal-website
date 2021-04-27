@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS contact_messages (
   name VARCHAR(250),
   email VARCHAR(250),
   message_content VARCHAR(2000)
-)
+);
