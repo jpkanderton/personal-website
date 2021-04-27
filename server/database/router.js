@@ -1,13 +1,13 @@
 const connection = require('./connection.js');
 
-const insertIntoTable = (callback) => {
+const insertIntoTable = (data, callback) => {
   const items = {
     name: 'bobby smith',
     email: 'kail@gmail.com',
     message: 'hey it is me kaili, john'
   };
 
-  let query = `insert into contact_messages (name, email, message_content) VALUES ('${items.name}', '${items.email}', '${items.message}')`;
+  let query = `insert into contact_messages (name, email, message_content) VALUES ('${data.name}', '${data.email}', '${data.message}')`;
 
   connection.query(query, callback);
 }

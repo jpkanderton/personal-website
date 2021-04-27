@@ -13,7 +13,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/messages', (req, res) => {
-  router.insertIntoTable((err, result)=>{
+  console.log('req.body: ', req.body);
+  router.insertIntoTable(req.body, (err, result)=>{
     if (err) {
       console.log('error occurred: ', err);
       return res.send(err);
