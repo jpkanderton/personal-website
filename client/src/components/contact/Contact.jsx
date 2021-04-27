@@ -5,6 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import axios from 'axios';
+import emailjs from 'emailjs-com';
+import { init, sendForm } from 'emailjs-com';
+import emailjsAPI from '../../../../emailjsAPI.js';
+init(emailjsAPI.userID);
+
 
 const Contact = ({isDisplayed}) => {
 // const Contact = ({isDisplayed}) => {
@@ -55,6 +60,14 @@ const ContactForm = () => {
       url: './messages',
       data: data
     })
+    emailjs.sendForm(emailjsAPI.serviceID, emailjsAPI.templateID, '#contact-form-container') //////////////////
+      .then((result) => {
+        console.log(result.text);
+      }), (error) => {
+        console.log(error.text);
+      }
+    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+
   }
 
   return (
@@ -70,6 +83,7 @@ const ContactForm = () => {
           className="contact-input"
           type="text"
           placeholder="Your Name"
+          name="name"
           {...register("name", {
             required: true
           })}
@@ -78,6 +92,7 @@ const ContactForm = () => {
           className="contact-input"
           type="text"
           placeholder="Email"
+          name="email"
           {...register("email", {
             required: true,
             // pattern:  /^\S+@\S+$/i
@@ -88,6 +103,7 @@ const ContactForm = () => {
           id="contact-input-large"
           className="contact-input"
           type="text"
+          name="message"
           placeholder="Type your message here"
           {...register("message", {
             required: true
