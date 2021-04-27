@@ -4,6 +4,7 @@ const { useState } = React;
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import axios from 'axios';
 
 const Contact = ({isDisplayed}) => {
 // const Contact = ({isDisplayed}) => {
@@ -48,6 +49,12 @@ const ContactForm = () => {
   const onSubmit = (data) => {
     console.log('submitting something...');
     console.log(data);
+    data.message = data.message.replace(/\'/g,"");
+    axios({
+      method: 'post',
+      url: './messages',
+      data: data
+    })
   }
 
   return (
@@ -151,3 +158,7 @@ const ContactAdditional = () => {
     </div>
   )
 }
+
+// const removeApos = (text) => {
+//   text.forEach()
+// }
