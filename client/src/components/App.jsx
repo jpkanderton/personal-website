@@ -80,6 +80,7 @@ const App = () =>{
 
   return (
     <>
+    {console.log('display about: ', aboutDisplayed)}
       <Home
         landingStatus={landingStatus}
         aboutClick={aboutClick}

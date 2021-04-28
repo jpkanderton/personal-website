@@ -12,6 +12,8 @@ const pictureContainer = <div id="about-picture-container"></div>;
 const About = ({isDisplayed}) => {
 
   return (
+    <>
+    {isDisplayed ?
     <div
       id="about-container"
       style = {isDisplayed ? shown : hidden}
@@ -29,6 +31,9 @@ const About = ({isDisplayed}) => {
         </div>
       </div>
     </div>
+    :
+    null}
+    </>
   )
 }
 
