@@ -63,7 +63,8 @@ const ContactForm = () => {
       data: data
     })
       .then((result)=> {
-        console.log('Success [post to mySQL]: ', result.config.data)
+        console.log('Success [post to mySQL]: ', result.config.data);
+        setSubmitSuccess(true);
       }, (error) => {
         console.log('Error: ', error)
       });
@@ -79,6 +80,7 @@ const ContactForm = () => {
     <div
       className="contact-containers"
     >
+      {!submitSuccess ?
       <form
         id="contact-form-container"
         className="contact-form-form"
@@ -123,6 +125,9 @@ const ContactForm = () => {
           value="Send"
         />
       </form>
+      :
+      <div className="thank-you">Thanks for the email!</div>
+      }
     </div>
   )
 }
