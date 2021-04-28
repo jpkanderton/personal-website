@@ -99,7 +99,6 @@ const ContactForm = () => {
         {errors.email && 'email required'}
         <input
           className = {!errors.email ? "contact-input" : "contact-input error-occurred"}
-          // className="contact-input"
           type="text"
           placeholder="Email"
           name="email"
@@ -139,13 +138,11 @@ const ContactAdditional = () => {
       className="contact-containers"
     >
       <div
-        // className=""
         id="contact-additional-note-container"
       >
         <p className="contact-page-font contact-page-note-font">I'd love to chat about any opportunities or just reach out to say hi!</p>
       </div>
       <div
-        // className=""
         id="contact-additional-email-container"
       >
         <p className="contact-page-font contact-page-email-font">john.pk.anderton@gmail.com</p>
