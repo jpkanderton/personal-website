@@ -120,6 +120,7 @@ input {
     display: flex;
     flex-direction: column-reverse;
     padding-top: 4vh;
+    width: 100%;
   }
 
   #contact-additional-container {
