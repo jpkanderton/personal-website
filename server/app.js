@@ -16,10 +16,11 @@ app.post('/messages', (req, res) => {
   console.log('req.body: ', req.body);
   router.insertIntoTable(req.body, (err, result)=>{
     if (err) {
-      console.log('error occurred: ', err);
-      return res.send(err);
+      console.log('Error [post to mySQL]: ', err);
+      res.status(500).send({message: 'Error [post to mySQL]', type: 'error'});
+      return
     }
-    console.log('success: ', result);
+    console.log('Success [post to mySQL] : ', result);
     res.send(result);
   })
 });

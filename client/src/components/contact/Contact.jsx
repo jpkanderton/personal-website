@@ -12,7 +12,6 @@ init(emailjsAPI.userID);
 
 
 const Contact = ({isDisplayed}) => {
-// const Contact = ({isDisplayed}) => {
   console.log('isdisplayed: ', isDisplayed)
   if (isDisplayed){
   return (
@@ -49,7 +48,10 @@ const shown = {
 
 
 const ContactForm = () => {
-  const { register, handleSubmit } = useForm();
+  const [errorOccurred, setError] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
     console.log('submitting something...');
@@ -60,14 +62,17 @@ const ContactForm = () => {
       url: './messages',
       data: data
     })
-    emailjs.sendForm(emailjsAPI.serviceID, emailjsAPI.templateID, '#contact-form-container') //////////////////
-      .then((result) => {
-        console.log(result.text);
-      }), (error) => {
-        console.log(error.text);
-      }
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-
+      .then((result)=> {
+        console.log('Success [post to mySQL]: ', result.config.data)
+      }, (error) => {
+        console.log('Error: ', error)
+      });
+    // emailjs.sendForm(emailjsAPI.serviceID, emailjsAPI.templateID, '#contact-form-container')
+    //   .then((result) => {
+    //     console.log(result.text);
+    //   }), (error) => {
+    //     console.log(error.text);
+    //   }
   }
 
   return (
@@ -79,8 +84,9 @@ const ContactForm = () => {
         className="contact-form-form"
         onSubmit={handleSubmit(onSubmit)}
       >
+        {errors.name && 'name required'}
         <input
-          className="contact-input"
+          className={!errors.name ? "contact-input" : "contact-input error-occurred"}
           type="text"
           placeholder="Your Name"
           name="name"
@@ -88,20 +94,22 @@ const ContactForm = () => {
             required: true
           })}
         />
+        {errors.email && 'email required'}
         <input
-          className="contact-input"
+          className = {!errors.email ? "contact-input" : "contact-input error-occurred"}
+          // className="contact-input"
           type="text"
           placeholder="Email"
           name="email"
           {...register("email", {
             required: true,
-            // pattern:  /^\S+@\S+$/i
             pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
           })}
         />
+        {errors.message && 'message required'}
         <input
           id="contact-input-large"
-          className="contact-input"
+          className={!errors.message ? "contact-input" : "contact-input error-occurred"}
           type="text"
           name="message"
           placeholder="Type your message here"
@@ -174,7 +182,3 @@ const ContactAdditional = () => {
     </div>
   )
 }
-
-// const removeApos = (text) => {
-//   text.forEach()
-// }
