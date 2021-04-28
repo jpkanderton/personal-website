@@ -125,7 +125,7 @@ const ContactForm = () => {
         />
       </form>
       :
-      <div className="thank-you">Thanks for the email!</div>
+      <div className="thank-you">Thanks for the message!</div>
       }
     </div>
   )
