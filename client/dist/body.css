@@ -7,7 +7,7 @@
 
 .project-section {
   display: flex;
-  min-height: 500px;
+  min-height: 700px;
   height: 100vh;
   width: 100%;
   min-width: 500px;
@@ -20,7 +20,7 @@
 .project-details-container {
   display: flex;
   flex-direction: column;
-  padding-top: 25vh;
+  padding-top: 10vw;
   width: 60%;
   height: 100%;
   min-height: 500px;
@@ -67,7 +67,7 @@
 }
 
 .project-video-container {
-  padding-top: 25vh;
+  padding-top: 10vw;
   width: 40%;
   height: 100%;
   min-height: 500px;
@@ -75,17 +75,20 @@
   outline: 2px solid black;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 725px) {
   .project-section {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 
   .project-video-container {
+    padding-top: 5vh;
     width: 100%;
   }
 
   .project-details-container {
+    padding-top: 5vh;
     width: 100%;
   }
 }
