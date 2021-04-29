@@ -7,6 +7,7 @@
   background-color: #EDC7B7;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  z-index: 2;
 }
 
 #desktop-nav {

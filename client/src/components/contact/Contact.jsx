@@ -145,7 +145,12 @@ const ContactAdditional = () => {
       <div
         id="contact-additional-email-container"
       >
-        <p className="contact-page-font contact-page-email-font">john.pk.anderton@gmail.com</p>
+        <p
+          id="contact-page-email"
+          className="contact-page-font contact-page-email-font"
+        >
+          john.pk.anderton@gmail.com
+        </p>
       </div>
       <div
         id="contact-additional-socials-container"
