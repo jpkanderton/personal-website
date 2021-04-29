@@ -66,10 +66,6 @@
   font-size: 30px;
 }
 
-@media only screen and (max-width: 600px) {
-
-}
-
 .project-video-container {
   padding-top: 25vh;
   width: 40%;
@@ -78,6 +74,22 @@
   background-color: rgba(0, 0, 255, 0.317);
   outline: 2px solid black;
 }
+
+@media only screen and (max-width: 600px) {
+  .project-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-video-container {
+    width: 100%;
+  }
+
+  .project-details-container {
+    width: 100%;
+  }
+}
+
 
 #section-1 {
   /* background-color: black; */
