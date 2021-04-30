@@ -1,6 +1,6 @@
 import React from 'react';
-import { BsThreeDots, BsX } from 'react-icons/Bs';
-import { FaGripLines } from 'react-icons/Fa';
+// import { BsThreeDots, BsX } from 'react-icons/Bs';
+// import { FaGripLines } from 'react-icons/Fa';
 
 const { useState } = React;
 
@@ -25,7 +25,7 @@ const MainIcon = ({status, mainIconClick, aboutDisplayed, contactDisplayed, disp
       href="#top"
       >
       {/* {status === 'entered' || aboutDisplayed || contactDisplayed ? <BsX size={70} color={'white'}/> : <FaGripLines size={35} color={'white'}/>} */}
-      <BsX size={70} color={'white'}/>
+      {/* <BsX size={70} color={'white'}/> */}
     </a>
   )
 }

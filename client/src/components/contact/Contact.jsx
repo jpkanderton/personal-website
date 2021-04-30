@@ -7,8 +7,8 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 import axios from 'axios';
 import emailjs from 'emailjs-com';
 import { init, sendForm } from 'emailjs-com';
-import emailjsAPI from '../../../../emailjsAPI.js';
-init(emailjsAPI.userID);
+// import emailjsAPI from '../../../../emailjsAPI.js';
+// init(emailjsAPI.userID);
 
 
 const Contact = ({isDisplayed}) => {
