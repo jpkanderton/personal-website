@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-// const router = require('./database/router.js');
+const router = require('./database/router.js');
 
 app.use(express.static('client/dist'));
 app.use(bodyParser.urlencoded({ extended: true }))
