@@ -9,9 +9,11 @@ import emailjs from 'emailjs-com';
 import { init, sendForm } from 'emailjs-com';
 // import emailjsAPI from '../../../../emailjsAPI.js';
 // init(emailjsAPI.userID);
+const fakeApi = process.env.envVariable || 'this is the regular variable';
 
 
 const Contact = ({isDisplayed}) => {
+  console.log('fakeApi: ', fakeApi);
   console.log('isdisplayed: ', isDisplayed)
   if (isDisplayed){
   return (
