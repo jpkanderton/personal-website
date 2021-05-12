@@ -7,11 +7,9 @@ const { useState } = React;
 
 const Home = ({aboutClick, displayContact, landingStatus, homeDisplayed, homeClick}) =>{
   if (!homeDisplayed) return null;
-  if (landingStatus === 'exited') {console.log('landingStatus exited')}
   let mainContainerStyle = null;
   if (landingStatus === 'entered') {
     mainContainerStyle = homeDisplayedStyle;
-    console.log('landingStatus entered')
   }
   return (
     <div id="main-container" style={mainContainerStyle}>
