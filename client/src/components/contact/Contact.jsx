@@ -10,10 +10,12 @@ import { init, sendForm } from 'emailjs-com';
 // import emailjsAPI from '../../../../emailjsAPI.js';
 // init(emailjsAPI.userID);
 // const fakeApi = process.env.envVariable || 'this is the regular variable';
+const testingTheVar = 'hi it is me john';
 
 
 const Contact = ({isDisplayed}) => {
-  console.log('fakeApi: ', process.env.envVariable);
+  // console.log('fakeApi: ', process.env.envVariable);
+  console.log(testingTheVar);
   console.log('isdisplayed: ', isDisplayed)
   if (isDisplayed){
   return (
