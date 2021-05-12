@@ -3,9 +3,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const emailAPI = require('emailjs-com');
 const sgMail = require('@sendgrid/mail');
-const {sendGridApi, sender, recipient} = require('../sendGridApi.js');
+// const {sendGridApi, sender, recipient} = require('../sendGridApi.js');
 const app = express();
-sgMail.setApiKey(sendGridApi);
+sgMail.setApiKey(process.env.sendGridApi);
 
 app.use(express.static('client/dist'));
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -13,7 +13,6 @@ app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
   res.send('hello world')
-  console.log(process.env.envVariable)
 });
 
 app.post('/messages', (req, res) => {
@@ -31,8 +30,8 @@ app.post('/messages', (req, res) => {
   /////// send GRID start
   //text(req.body.name, req.body.email, req.body.message),
   const msg = {
-    to: recipient,
-    from: sender,
+    to: process.env.recipient,
+    from: process.env.sender,
     subject: subject(req.body.name),
     text: text(req.body.name, req.body.email, req.body.message)
   };
