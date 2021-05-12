@@ -3,10 +3,11 @@ const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
 const sendGridApiHidden = require('../sendGridApi.js');
 const app = express();
-sgMail.setApiKey(process.env.sendGridApi);
 const sendGridApi = process.env.sendGridApi || sendGridApiHidden.sendGridApi;
 const sender = process.env.sender || sendGridApiHidden.sender;
 const recipient = process.env.recipient || sendGridApiHidden.recipient;
+sgMail.setApiKey(sendGridApi);
+
 
 app.use(express.static('client/dist'));
 app.use(bodyParser.urlencoded({ extended: true }))
