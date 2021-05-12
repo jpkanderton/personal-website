@@ -38,7 +38,6 @@ const App = () =>{
     setDisplayContact(true);
   }
   const hideContact = () => {
-    console.log('setting display contact to false')
     setDisplayContact(false)
   };
 
@@ -54,7 +53,6 @@ const App = () =>{
           setDisplayHome(true);
           setDisplayContact(false);
         };
-        // setLandingStatus('entered');
         return;
       }
     }
@@ -80,7 +78,6 @@ const App = () =>{
 
   return (
     <>
-    {console.log('display about: ', aboutDisplayed)}
       <Home
         landingStatus={landingStatus}
         aboutClick={aboutClick}
