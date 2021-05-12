@@ -34,7 +34,6 @@ app.post('/messages', (req, res) => {
     subject: subject(req.body.name),
     text: text(req.body.name, req.body.email, req.body.message)
   };
-  res.send(msg);
   sgMail
     .send(msg)
     .then(() => {res.send('success')}, error => {
