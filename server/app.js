@@ -1,9 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
-// const {sendGridApi, sender, recipient} = require('../sendGridApi.js');
+const sendGridApiHidden = require('../sendGridApi.js');
 const app = express();
 sgMail.setApiKey(process.env.sendGridApi);
+const sendGridApi = process.env.sendGridApi || sendGridApiHidden.sendGridApi;
+const sender = process.env.sender || sendGridApiHidden.sender;
+const recipient = process.env.recipient || sendGridApiHidden.recipient;
 
 app.use(express.static('client/dist'));
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -15,8 +18,8 @@ app.get('/', (req, res) => {
 
 app.post('/messages', (req, res) => {
   const msg = {
-    to: process.env.recipient,
-    from: process.env.sender,
+    to: recipient,
+    from: sender,
     subject: subject(req.body.name),
     text: text(req.body.name, req.body.email, req.body.message)
   };
