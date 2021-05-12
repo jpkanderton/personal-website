@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 
 app.post('/messages', (req, res) => {
   console.log('req.body: ', req.body);
-  console.log(process.env.envVariable)
   // router.insertIntoTable(req.body, (err, result)=>{
   //   if (err) {
   //     console.log('Error [post to mySQL]: ', err);
@@ -35,7 +34,7 @@ app.post('/messages', (req, res) => {
     subject: subject(req.body.name),
     text: text(req.body.name, req.body.email, req.body.message)
   };
-  console.log(msg);
+  res.send(msg);
   sgMail
     .send(msg)
     .then(() => {res.send('success')}, error => {
