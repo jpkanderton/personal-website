@@ -67,7 +67,7 @@ const ContactForm = () => {
       data: data
     })
       .then((result)=> {
-        console.log('Success [post to mySQL]: ', result.config.data);
+        console.log('Success [post to mySQL]: ', result);
         setSubmitSuccess(true);
       }, (error) => {
         console.log('Error: ', error)
