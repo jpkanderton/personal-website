@@ -7,16 +7,8 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 import axios from 'axios';
 import emailjs from 'emailjs-com';
 import { init, sendForm } from 'emailjs-com';
-// import emailjsAPI from '../../../../emailjsAPI.js';
-// init(emailjsAPI.userID);
-// const fakeApi = process.env.envVariable || 'this is the regular variable';
-const testingTheVar = 'hi it is me john';
-
 
 const Contact = ({isDisplayed}) => {
-  // console.log('fakeApi: ', process.env.envVariable);
-  console.log(testingTheVar);
-  console.log('isdisplayed: ', isDisplayed)
   if (isDisplayed){
   return (
     <div
@@ -42,7 +34,6 @@ export default Contact;
 const hidden = {
   zIndex: -1,
   opacity: '0%',
-  // transform: 'translate(0px, 100vh)'
 }
 
 const shown = {
@@ -58,8 +49,6 @@ const ContactForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
-    console.log('submitting something...');
-    console.log(data);
     data.message = data.message.replace(/\'/g,"");
     axios({
       method: 'post',
@@ -67,17 +56,10 @@ const ContactForm = () => {
       data: data
     })
       .then((result)=> {
-        console.log('Success [post to mySQL]: ', result);
         setSubmitSuccess(true);
       }, (error) => {
         console.log('Error: ', error)
       });
-    // emailjs.sendForm(emailjsAPI.serviceID, emailjsAPI.templateID, '#contact-form-container')
-    //   .then((result) => {
-    //     console.log(result.text);
-    //   }), (error) => {
-    //     console.log(error.text);
-    //   }
   }
 
   return (

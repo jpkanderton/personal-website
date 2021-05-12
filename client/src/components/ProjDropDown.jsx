@@ -48,7 +48,6 @@ const ProjDropDown = () => {
       className="grid-col-start-8"
       id="dropdown-container"
       onMouseLeave={() => {
-        console.log('Mouse Leaves');
         setSectionClickable(false);
         dropdownLeave();
       }}
