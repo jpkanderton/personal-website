@@ -1,7 +1,5 @@
-//
 const express = require('express');
 const bodyParser = require('body-parser');
-const emailAPI = require('emailjs-com');
 const sgMail = require('@sendgrid/mail');
 // const {sendGridApi, sender, recipient} = require('../sendGridApi.js');
 const app = express();
@@ -16,18 +14,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/messages', (req, res) => {
-  console.log('req.body: ', req.body);
-  // router.insertIntoTable(req.body, (err, result)=>{
-  //   if (err) {
-  //     console.log('Error [post to mySQL]: ', err);
-  //     res.status(500).send({message: 'Error [post to mySQL]', type: 'error'});
-  //     return
-  //   }
-  //   console.log('Success [post to mySQL] : ', result);
-  //   res.send(result);
-  // })
-  /////// send GRID start
-  //text(req.body.name, req.body.email, req.body.message),
   const msg = {
     to: process.env.recipient,
     from: process.env.sender,
