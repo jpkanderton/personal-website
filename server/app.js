@@ -16,7 +16,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/messages', (req, res) => {
-  res.send(process.env.sender)
   console.log('req.body: ', req.body);
   console.log(process.env.envVariable)
   // router.insertIntoTable(req.body, (err, result)=>{
@@ -43,6 +42,7 @@ app.post('/messages', (req, res) => {
       console.error(error);
       if (error.response) {
         console.error(error.response.body)
+        res.send('error', error);
       }
     });
 });
