@@ -1,8 +1,18 @@
+const moduleIsAvailable = (path) => {
+  try {
+      require.resolve(path);
+      return true;
+  } catch (e) {
+      return false;
+  }
+}
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
-const sendGridApiHidden = require('../sendGridApi.js');
 const app = express();
+const sendGridApiHidden = moduleIsAvailable('../sendGridApi.js') ? require('../sendGridApi.js') : null;
+
 const sendGridApi = process.env.sendGridApi || sendGridApiHidden.sendGridApi;
 const sender = process.env.sender || sendGridApiHidden.sender;
 const recipient = process.env.recipient || sendGridApiHidden.recipient;
@@ -44,5 +54,6 @@ const text = (name, email, message) => (
   This person's email address is: ${email}\n\n
   via SendGrid`
 )
+
 
 module.exports = app;
