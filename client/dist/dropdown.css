@@ -6,6 +6,7 @@
 
 #dropdown-title {
   text-align: center;
+  cursor: pointer;
 }
 
 #dropdown-title:hover {
