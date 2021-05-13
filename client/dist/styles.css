@@ -140,6 +140,11 @@ body {
   width: 50px;
   transition: all .25s ease;
   z-index: 3;
+  cursor: pointer;
+}
+
+#main-icon-container * {
+  cursor: pointer;
 }
 
 #landing-square {
