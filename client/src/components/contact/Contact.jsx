@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import axios from 'axios';
-import emailjs from 'emailjs-com';
-import { init, sendForm } from 'emailjs-com';
 
 const Contact = ({isDisplayed}) => {
   if (isDisplayed){
