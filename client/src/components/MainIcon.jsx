@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsX } from 'react-icons/Bs';
+import { BsX } from 'react-icons/bs';
 // import { FaGripLines } from 'react-icons/Fa';
 
 const { useState } = React;
