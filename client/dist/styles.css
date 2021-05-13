@@ -171,16 +171,48 @@ body {
   background-color: #EEE2DC;
 }
 
+.bckgrnd-pink-drkr {
+  background-color: #c4b8b2;
+}
+
+.bckgrnd-pink-drkrst {
+  background-color: #807772;
+}
+
 .bckgrnd-grey-prmry {
   background-color: #BAB2B5;
+}
+
+.bckgrnd-grey-drkr {
+  background-color: #8f898b;
+}
+
+.bckgrnd-grey-drkrst {
+  background-color: #5b5758;
 }
 
 .bckgrnd-blue-prmry {
   background-color: #123C69;
 }
 
+.bckgrnd-blue-drkr {
+  background-color: #0d2b4b;
+}
+
+.bckgrnd-blue-drkrst {
+  background-color: #081a2e;
+}
+
 .bckgrnd-red-prmry {
   background-color: #AC3B61;
+}
+
+.bckgrnd-red-drkr {
+  background-color: #7b2a45;
+}
+
+.bckgrnd-red-drkrst {
+  background-color: #4f1b2c;
 }
 
 .cntr-w-flex {
