@@ -37,6 +37,6 @@ const description = "Scaled the backend for the additional products module of an
 
 const techTitle = "Developed Using:"
 
-const frontEndTech = "React, Axios, CSS-Modules, Webpack";
+const frontEndTech = "Front-End: React, Axios, CSS-Modules, Webpack";
 
 const backEndTech = "Back-End: Node, Express, Nginx, Redis, PostgreSQL";
