@@ -45,14 +45,14 @@ const ProjDropDown = () => {
 
   return (
     <div
-      className="grid-col-start-8"
+      className="grid-col-start-8 header-text"
       id="dropdown-container"
       onMouseLeave={() => {
         setSectionClickable(false);
         dropdownLeave();
       }}
       >
-      <div id="dropdown-title"
+      <div id="dropdown-title header-text"
         onClick={()=> {
           setSectionClickable(!isSectionClickable);
           }

@@ -1,13 +1,16 @@
 import React from 'react';
 const { useState } = React;
 
-const text = 'adskjfha adskjfdkajhfdaskf  sdkjhfkdjahfkajs dkjfhs sdkjfhk sdkjfhkj dksjfhkjh sdkfjhkh sdkfjhkjh sdfkjhkj hdsf skjdhfkh ksjhfkj skjfhkjh  ksdfhkjdshkjhfds kjhdsfkjhsdkjhf  ksjhdfkjdhskjf ksjdhfkjdhskfkj skjdfhkjdkhsfh';
+const text = 'I am a Full-Stack Software Engineer with a background in JavaScript (ES5/ES6+), ReactJS with Hooks, Node.js, ExpressJS, MySQL, PostgreSQL, Apache Cassandra, MongoDB, AWS/EC2/S3, Webpack, Nginx, Enzyme, Jest, ArtilleryIO, LoaderIO, New Relic.';
 
 const textTwo = 'im doing well but i dont understand what i am doing';
 
 const textThree = 'waszzzzup sdfkjsdkfjsa hhhheeyyyyyyyy';
 
-const pictureContainer = <div id="about-picture-container"></div>;
+const pictureContainer =
+  <div id="about-picture-container">
+    <img id="about-prof-img" src="resources/_DSC1180.JPG"></img>
+  </div>;
 
 const About = ({isDisplayed}) => {
 

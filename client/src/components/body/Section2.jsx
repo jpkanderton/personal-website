@@ -8,13 +8,13 @@ const Section2 = () =>{
   return (
     <div id="section-2" className="project-section">
       <div className="project-details-container">
-        <h1 className="project-title project-subsection">Aqua</h1>
+        <h1 className="project-title project-subsection">Cameron</h1>
         <div className="project-overview-title project-subsection">Overview</div>
-        <div className="project-details-content project-subsection">{loremEpsum}</div>
+        <div className="project-details-content project-subsection">{description}</div>
       </div>
       <div className="project-video-container">
         <div className="video-container">
-          <video className="video" src="https://my-vids-bucket.s3-us-west-1.amazonaws.com/FEC_first_video.mov" width="320" height="240" controls/>
+          <img className="video" src="https://my-vids-bucket.s3-us-west-1.amazonaws.com/sdc-architecture.png" width="320" height="240"/>
         </div>
         <div className="tech-container">
           <div className="tech-title">
@@ -31,11 +31,12 @@ const Section2 = () =>{
 
 export default Section2;
 
-const loremEpsum = "Collaborated with a remote team to build a booking application for reserving campsites. I was tasked with the description and details component and designed a RESTful API with Express and Node.js to populate the client with data. I then created modular responsive modals with React Hooks and CSS transitions. At the end of the project we deployed the app on AWS EC2 and pieced the components together on a proxy server.";
+const loremEpsum = "Reworked the back-end of a retail marketplace application in order to handle higher traffic. Moved database to PostgreSQL for more efficient read operations and ACID compliance. Horizontally scaled the application with by placing an Nginx load balancer in front of three instances of the application's server. Further improved the responsiveness of the application by adding Redis caching in front of the database.";
 
+const description = "Scaled the backend for the additional products module of an online retail marketplace, containing over 10 million primary records, to a PostgreSQL database. Reduced response time by over 95% with throughput of 1k RPS with the implementation of an Nginx load-balancer distributed across four service clones. Improved Google Lighthouse audit page speed score to 98% with Redis caching system."
 
 const techTitle = "Developed Using:"
 
-const frontEndTech = "Front-End: React, React Hooks, CSS-Grid, CSS-Flex";
+const frontEndTech = "React, Axios, CSS-Modules, Webpack";
 
-const backEndTech = "Back-End: Node, MySQL";
+const backEndTech = "Back-End: Node, Express, Nginx, Redis, PostgreSQL";
