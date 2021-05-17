@@ -140,7 +140,10 @@ const ContactAdditional = () => {
         id="contact-additional-socials-container"
       >
         <div id="contact-icon-bar">
-          <div className="contact-icon-container cntr-w-flex">
+          <a
+            className="contact-icon-container cntr-w-flex"
+            href="https://github.com/jpkanderton"
+          >
             <FontAwesomeIcon
               className="faIcon"
               icon={faGithub}
@@ -149,8 +152,11 @@ const ContactAdditional = () => {
               color="black"
               className="cursor-pointer"
             />
-          </div>
-          <div className="contact-icon-container cntr-w-flex">
+          </a>
+          <a
+            className="contact-icon-container cntr-w-flex"
+            href="mailto:john.pk.anderton@gmail.com"
+          >
             <FontAwesomeIcon
               icon={faPaperPlane}
               size='3x'
@@ -159,15 +165,18 @@ const ContactAdditional = () => {
               className="cursor-pointer"
 
             />
-          </div>
-          <div className="contact-icon-container cntr-w-flex">
+          </a>
+          <a
+            className="contact-icon-container cntr-w-flex"
+            href="https://www.linkedin.com/in/johnpkanderton/"
+          >
             <FontAwesomeIcon
               icon={faLinkedin}
               size='3x'
               color="black"
               className="cursor-pointer"
             />
-          </div>
+          </a>
         </div>
       </div>
     </div>
