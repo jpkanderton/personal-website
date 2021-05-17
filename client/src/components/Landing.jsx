@@ -52,7 +52,10 @@ const Landing = ({mainIconClick, status}) => {
             <p className="cursor-pointer">View My Work →</p>
           </div>
           <div id="landing-icon-bar">
-            <div className="landing-icon-container cntr-w-flex">
+            <a
+              className="landing-icon-container cntr-w-flex"
+              href="https://github.com/jpkanderton"
+            >
               <FontAwesomeIcon
                 className="faIcon"
                 icon={faGithub}
@@ -61,8 +64,11 @@ const Landing = ({mainIconClick, status}) => {
                 color="#123C69"
                 className="cursor-pointer"
               />
-            </div>
-            <div className="landing-icon-container cntr-w-flex">
+            </a>
+            <a
+              className="landing-icon-container cntr-w-flex"
+              href="mailto:john.pk.anderton@gmail.com"
+            >
               <FontAwesomeIcon
                 icon={faPaperPlane}
                 size='3x'
@@ -71,15 +77,18 @@ const Landing = ({mainIconClick, status}) => {
                 className="cursor-pointer"
 
               />
-            </div>
-            <div className="landing-icon-container cntr-w-flex">
+            </a>
+            <a
+              className="landing-icon-container cntr-w-flex"
+              href="https://www.linkedin.com/in/johnpkanderton/"
+            >
               <FontAwesomeIcon
                 icon={faLinkedin}
                 size='3x'
                 color="#123C69"
                 className="cursor-pointer"
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>
