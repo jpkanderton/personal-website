@@ -124,14 +124,14 @@ const ContactAdditional = () => {
       <div
         id="contact-additional-note-container"
       >
-        <p className="contact-page-font contact-page-note-font">I'd love to chat about any opportunities or just reach out to say hi!</p>
+        <p className="font-color-prmry contact-page-note-font">I'd love to chat about any opportunities or just reach out to say hi!</p>
       </div>
       <div
         id="contact-additional-email-container"
       >
         <p
           id="contact-page-email"
-          className="contact-page-font contact-page-email-font"
+          className="font-color-prmry contact-page-email-font"
         >
           john.pk.anderton@gmail.com
         </p>
@@ -139,18 +139,17 @@ const ContactAdditional = () => {
       <div
         id="contact-additional-socials-container"
       >
-        <div id="contact-icon-bar">
+        <div
+          id="contact-icon-bar"
+        >
           <a
             className="contact-icon-container cntr-w-flex"
             href="https://github.com/jpkanderton"
           >
             <FontAwesomeIcon
-              className="faIcon"
+              className="font-color-prmry cursor-pointer"
               icon={faGithub}
               size='3x'
-              // color="white"
-              color="black"
-              className="cursor-pointer"
             />
           </a>
           <a
@@ -160,9 +159,7 @@ const ContactAdditional = () => {
             <FontAwesomeIcon
               icon={faPaperPlane}
               size='3x'
-              // color="#123C69"
-              color="black"
-              className="cursor-pointer"
+              className="font-color-prmry cursor-pointer"
 
             />
           </a>
@@ -173,8 +170,7 @@ const ContactAdditional = () => {
             <FontAwesomeIcon
               icon={faLinkedin}
               size='3x'
-              color="black"
-              className="cursor-pointer"
+              className="font-color-prmry cursor-pointer"
             />
           </a>
         </div>

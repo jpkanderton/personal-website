@@ -8,9 +8,9 @@ const Section2 = () =>{
   return (
     <div id="section-2" className="project-section">
       <div className="project-details-container">
-        <h1 className="project-title project-subsection">Cameron</h1>
-        <div className="project-overview-title project-subsection">Overview</div>
-        <div className="project-details-content project-subsection">{description}</div>
+        <h1 className="font-color-prmry project-title project-subsection">Cameron</h1>
+        <div className="font-color-prmry project-overview-title project-subsection">Overview</div>
+        <div className="font-color-prmry project-details-content project-subsection">{description}</div>
       </div>
       <div className="project-video-container">
         <div className="video-container">
@@ -18,9 +18,9 @@ const Section2 = () =>{
         </div>
         <div className="tech-container">
           <div className="tech-title">
-            <p className="large-font">{techTitle}</p>
-            <p>{frontEndTech}</p>
-            <p>{backEndTech}</p>
+            <p className="font-color-prmry large-font">{techTitle}</p>
+            <p className="font-color-prmry">{frontEndTech}</p>
+            <p className="font-color-prmry">{backEndTech}</p>
           </div>
           <div className="tech-content"></div>
         </div>

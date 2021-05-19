@@ -13,7 +13,7 @@ const ProjDropDown = () => {
     section3: null
   });
 
-  let ddProject = 'dropdown-project';
+  let ddProject = 'font-color-prmry dropdown-project';
 
   const toggleClickability = () => {
     if (isSectionClickable) {
@@ -52,7 +52,9 @@ const ProjDropDown = () => {
         dropdownLeave();
       }}
       >
-      <div id="dropdown-title header-text"
+      <div
+        id="dropdown-title header-text"
+        className="font-color-prmry"
         onClick={()=> {
           setSectionClickable(!isSectionClickable);
           }

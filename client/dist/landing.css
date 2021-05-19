@@ -25,8 +25,6 @@
   position: absolute;
   text-align: center;
   font-size: 100px;
-  color: white;
-  /* text-shadow: 2px 2px 2px #ac3B61; */
   transition: all 2s ease;
 }
 
@@ -92,6 +90,7 @@
 }
 
 #learn-more-container:hover {
+  background-color: #618888
 }
 
 @media only screen and (max-width: 509px) {

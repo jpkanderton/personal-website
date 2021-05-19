@@ -5,7 +5,6 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 
 
 const { useState, useEffect } = React;
-// const element = <FontAwesomeIcon icon={faCoffee} />
 let count = 0;
 
 const Landing = ({mainIconClick, status}) => {
@@ -46,17 +45,21 @@ const Landing = ({mainIconClick, status}) => {
           className="bckgrnd-main-prmry"
           style={innerStyle}>
           <img id="landing-img" src="resources/prof-pic.png"></img>
-          <h1 id="landing-title-1">Hi, I'm John</h1>
+          <h1 id="landing-title-1"
+            className="font-color-prmry"
+          >
+            Hi, I'm John
+          </h1>
           <h6
             id="landing-title-2"
-            className="cursor-arrow"
+            className="font-color-prmry cursor-arrow"
           >
             I'm a software engineer and I like to build things</h6>
           <div
             id="learn-more-container" className="center-text cursor-pointer"
             onClick={mainIconClick}
           >
-            <p className="cursor-pointer">View My Work →</p>
+            <p className="font-color-prmry cursor-pointer">View My Work →</p>
           </div>
           <div
             id="landing-icon-bar"
@@ -67,12 +70,9 @@ const Landing = ({mainIconClick, status}) => {
               href="https://github.com/jpkanderton"
             >
               <FontAwesomeIcon
-                className="faIcon"
                 icon={faGithub}
                 size='3x'
-                // color="white"
-                color="#123C69"
-                className="cursor-pointer"
+                className="font-color-prmry cursor-pointer"
               />
             </a>
             <a
@@ -82,9 +82,7 @@ const Landing = ({mainIconClick, status}) => {
               <FontAwesomeIcon
                 icon={faPaperPlane}
                 size='3x'
-                // color="#123C69"
-                color="#AC3B61"
-                className="cursor-pointer"
+                className="font-color-prmry cursor-pointer"
 
               />
             </a>
@@ -95,8 +93,7 @@ const Landing = ({mainIconClick, status}) => {
               <FontAwesomeIcon
                 icon={faLinkedin}
                 size='3x'
-                color="#123C69"
-                className="cursor-pointer"
+                className="font-color-prmry cursor-pointer"
               />
             </a>
           </div>

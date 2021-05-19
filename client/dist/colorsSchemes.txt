@@ -1,0 +1,13 @@
+// 22 Corporate and Traditional //
+#88BDBC
+#254E58
+#112D32
+#4F4A41
+#6E6658
+
+// 24 Clean and Modern
+#17252A
+#2B7A78
+#3AAFA9
+#DEF2F1
+#FEFFFF

@@ -16,24 +16,27 @@ const Header = ({aboutClick, displayContact, homeClick}) =>{
   const [selectedOption, setSelectedOption] = useState(null);
 
   return (
-    <div id="header-container">
-      <div id="desktop-nav" className="ss-font">
+    <div
+      id="header-container"
+      className="bckgrnd-main-prmry"
+    >
+      <div id="desktop-nav">
         <div className="grid grid-12-columns">
           <a
-            className="grid-col-start-2 header-text"
+            className="grid-col-start-2 font-color-prmry header-text"
             onClick={homeClick}
           >
             John Anderton
           </a>
           <a
-            className="grid-col-start-4 header-text"
+            className="grid-col-start-4 font-color-prmry header-text"
             onClick={homeClick}
             href="#"
           >
             Home
           </a>
           <a
-            className="grid-col-start-6 header-text"
+            className="grid-col-start-6 font-color-prmry header-text"
             onClick={aboutClick}
             href="#about-container"
           >
@@ -41,7 +44,7 @@ const Header = ({aboutClick, displayContact, homeClick}) =>{
           </a>
           <ProjDropDown />
           <a
-            className="grid-col-start-10 header-text"
+            className="grid-col-start-10 font-color-prmry header-text"
             onClick={displayContact}
           >
             Contact
