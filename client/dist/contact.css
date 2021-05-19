@@ -1,6 +1,5 @@
 #contact-page-container {
   min-height: 100vh;
-  background-color: #EDC7B7;
   position: absolute;
   overflow: hidden;
   transition: .25s opacity ease-in-out;
@@ -18,9 +17,6 @@
 }
 
 .contact-containers {
-  /* border: 2px solid white;
-  height: 300px;
-  width: 300px; */
 }
 
 #contact-form-container {

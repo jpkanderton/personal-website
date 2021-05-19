@@ -31,12 +31,19 @@ const Landing = ({mainIconClick, status}) => {
   })
 
   return (
-    <div id="landing-container" style={outerStyle}>
-      <div id="landing-square"></div>
+    <div
+      id="landing-container"
+      className="bckgrnd-main-prmry"
+      style={outerStyle}
+    >
+      <div
+        id="landing-square"
+        className="bckgrnd-main-prmry"
+      ></div>
       <div className="hidden-wrapper">
         <div
           id="landing-inner"
-          className="bckgrnd-tan-drkr"
+          className="bckgrnd-main-prmry"
           style={innerStyle}>
           <img id="landing-img" src="resources/prof-pic.png"></img>
           <h1 id="landing-title-1">Hi, I'm John</h1>
@@ -51,7 +58,10 @@ const Landing = ({mainIconClick, status}) => {
           >
             <p className="cursor-pointer">View My Work →</p>
           </div>
-          <div id="landing-icon-bar">
+          <div
+            id="landing-icon-bar"
+            className="bckgrnd-scndry1-prmry"
+          >
             <a
               className="landing-icon-container cntr-w-flex"
               href="https://github.com/jpkanderton"

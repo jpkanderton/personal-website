@@ -12,7 +12,11 @@ const Home = ({aboutClick, displayContact, landingStatus, homeDisplayed, homeCli
     mainContainerStyle = homeDisplayedStyle;
   }
   return (
-    <div id="main-container" style={mainContainerStyle}>
+    <div
+      id="main-container"
+      className="bckgrnd-main-prmry"
+      style={mainContainerStyle}
+    >
       <Header
         aboutClick={aboutClick}
         displayContact={displayContact}

@@ -27,11 +27,9 @@ a:hover {
 
 body {
   overflow: hidden;
-  background-color: #EDC7B7;
 }
 
 #main-container {
-  background-image: url('./resources/mountain-background.jpg');
   position: absolute;
   width:100%;
 }
@@ -43,7 +41,6 @@ body {
 }
 
 #app {
-  background-color: #EDC7B7;
 }
 
 .hidden-wrapper {
@@ -69,67 +66,6 @@ body {
 
 #main-icon-container * {
   cursor: pointer;
-}
-
-
-.bckgrnd-tan-prmry {
-  background-color: #EDC7B7;
-}
-
-.bckgrnd-tan-drkr {
-  background-color: #E9BFAD;
-}
-
-.bckgrnd-tan-drkrst {
-  background-color: #c9a494;
-}
-
-.bckgrnd-pink-prmry {
-  background-color: #EEE2DC;
-}
-
-.bckgrnd-pink-drkr {
-  background-color: #c4b8b2;
-}
-
-.bckgrnd-pink-drkrst {
-  background-color: #807772;
-}
-
-.bckgrnd-grey-prmry {
-  background-color: #BAB2B5;
-}
-
-.bckgrnd-grey-drkr {
-  background-color: #8f898b;
-}
-
-.bckgrnd-grey-drkrst {
-  background-color: #5b5758;
-}
-
-.bckgrnd-blue-prmry {
-  background-color: #123C69;
-}
-
-.bckgrnd-blue-drkr {
-  background-color: #0d2b4b;
-}
-
-.bckgrnd-blue-drkrst {
-  background-color: #081a2e;
-}
-
-.bckgrnd-red-prmry {
-  background-color: #AC3B61;
-}
-
-.bckgrnd-red-drkr {
-  background-color: #7b2a45;
-}
-
-.bckgrnd-red-drkrst {
-  background-color: #4f1b2c;
 }
 
 .cntr-w-flex {
