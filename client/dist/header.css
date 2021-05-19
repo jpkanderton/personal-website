@@ -27,12 +27,6 @@
   text-align: center;
 }
 
-@media only screen and (max-width: 500px) {
-  .grid-12-columns {
-    grid-template-columns: 1fr 125px 10fr 50px 15px 50px 15px 50px 15px 50px 15px;
-  }
-}
-
 .grid-col-start-2 {
   grid-column-start: 2;
 }
@@ -51,4 +45,10 @@
 
 .grid-col-start-10 {
   grid-column-start: 10;
+}
+
+@media only screen and (max-width: 500px) {
+  .grid-12-columns {
+    grid-template-columns: 1fr 125px 10fr 50px 15px 50px 15px 50px 15px 50px 15px;
+  }
 }

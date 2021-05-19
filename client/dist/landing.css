@@ -1,0 +1,147 @@
+#landing-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .25s ease;
+}
+
+#landing-inner {
+  position: relative;
+  border: 2px solid white;
+  height: 500px;
+  width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all .25s ease;
+}
+
+#landing-inner:hover {
+  /* transform: scale(1.5); */
+}
+
+#landing-text {
+  position: absolute;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  /* text-shadow: 2px 2px 2px #ac3B61; */
+  transition: all 2s ease;
+}
+
+#landing-text:hover {
+  color: #7b6359;
+  text-shadow: 2px 2px 2px #e9bfad;
+}
+
+#landing-img {
+  height: 250px;
+  width: 250px;
+  padding: 10px;
+  position: absolute;
+  left: 25%;
+  transition: all .5s ease-in-out;
+}
+
+#landing-img:hover {
+  transform: scale(1.05);
+}
+
+#landing-icon-bar {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 400px;
+  background-color: #e4d1c8;
+  outline: 2px solid white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.landing-icon-container {
+  height: 100%;
+  width: 25%;
+  cursor: pointer;
+  transition: transform .7s ease-in;
+}
+
+.landing-icon-container:hover {
+  transform: rotate(360deg);
+}
+
+#landing-square {
+  border: 2px solid white ;
+  position: absolute;
+  height: 98vh;
+  width: 98vw;
+  transition: all .25s ease;
+}
+
+#landing-title-1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+}
+
+#landing-title-2 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 60%;
+}
+
+#learn-more-container:hover {
+  background-color: #c9a494;
+}
+
+@media only screen and (max-width: 509px) {
+
+  #landing-inner {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    transition: all .25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #landing-text {
+    position: relative;
+    height: auto;
+  }
+
+  #landing-img {
+    position: relative;
+    height: auto;
+    left: auto;
+  }
+
+  #landing-icon-bar {
+    position: relative;
+    top: auto;
+    height: 100px
+  }
+
+  #landing-title-1 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 10px;
+  }
+
+  #landing-title-2 {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  #learn-more-container {
+    position: relative;
+    margin: 10px;
+  }
+}
