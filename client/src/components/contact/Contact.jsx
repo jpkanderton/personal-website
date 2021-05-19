@@ -131,7 +131,8 @@ const ContactAdditional = () => {
       >
         <p
           id="contact-page-email"
-          className="font-color-prmry contact-page-email-font"
+          className="font-color-prmry contact-page-email-font cursor-pointer"
+          onClick={copyToClipboard}
         >
           john.pk.anderton@gmail.com
         </p>
@@ -177,4 +178,11 @@ const ContactAdditional = () => {
       </div>
     </div>
   )
+}
+
+const copyToClipboard = () => {
+  console.log('hi')
+  var copyText = document.getElementById("contact-page-email").textContent;
+  navigator.clipboard.writeText(copyText);
+  alert (`Copied ${copyText} to the clipboard`);
 }
