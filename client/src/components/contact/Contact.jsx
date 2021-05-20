@@ -181,12 +181,22 @@ const ContactAdditional = () => {
 }
 
 const copyToClipboard = () => {
-  var textToCopy = document.getElementById("contact-page-email").innerText;
-  var myTemporaryInputElement = document.createElement("input");
+  let numOfCh = document.querySelector('#contact-additional-email-container').childNodes.length;
+  if (numOfCh > 1) return;
+  const textToCopy = document.getElementById("contact-page-email").innerText;
+  const myTemporaryInputElement = document.createElement("input");
   myTemporaryInputElement.type = "text";
   myTemporaryInputElement.value = textToCopy;
   document.body.appendChild(myTemporaryInputElement);
   myTemporaryInputElement.select();
   document.execCommand("Copy");
   document.body.removeChild(myTemporaryInputElement);
+  const newElement = document.createElement('p');
+  newElement.type = "text";
+  newElement.innerText = "Copied!";
+  newElement.setAttribute("id", "copied-alert");
+  newElement.setAttribute("class", "contact-page-email-font");
+  const myElement = document.querySelector('#contact-additional-email-container');
+  myElement.appendChild(newElement);
+  setTimeout(function(){ myElement.removeChild(newElement); }, 5000);
 }

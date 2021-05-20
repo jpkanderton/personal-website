@@ -81,6 +81,7 @@ input {
 #contact-additional-email-container {
   padding-top: 4vh;
   padding-bottom: 4vh;
+  display: flex;
 }
 
 .contact-icon-container {
@@ -108,6 +109,11 @@ input {
   padding: 10% 10% 10% 10%;
   margin-right: 10%;
   text-align: center;
+}
+
+#copied-alert {
+  margin-left: 10px;
+  color: green;
 }
 
 @media only screen and (max-width: 509px) {
