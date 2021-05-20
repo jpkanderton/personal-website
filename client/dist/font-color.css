@@ -1,5 +1,5 @@
 .font-color-prmry {
-  color: white
+  color: rgb(255, 255, 255)
 }
 
 .font-color-scndry1 {
@@ -9,6 +9,15 @@
 .font-color-scndry2 {
   color: white
 }
+
+.font-color-prmry-w-hover {
+  color: white;
+}
+
+.font-color-prmry-w-hover:hover {
+  color: #112D32;
+}
+
 
 .border-color-prmry {
   color: white

@@ -131,7 +131,7 @@ const ContactAdditional = () => {
       >
         <p
           id="contact-page-email"
-          className="font-color-prmry contact-page-email-font cursor-pointer"
+          className="font-color-prmry-w-hover contact-page-email-font cursor-pointer"
           onClick={copyToClipboard}
         >
           john.pk.anderton@gmail.com
@@ -148,7 +148,7 @@ const ContactAdditional = () => {
             href="https://github.com/jpkanderton"
           >
             <FontAwesomeIcon
-              className="font-color-prmry cursor-pointer"
+              className="font-color-prmry-w-hover cursor-pointer"
               icon={faGithub}
               size='3x'
             />
@@ -160,7 +160,7 @@ const ContactAdditional = () => {
             <FontAwesomeIcon
               icon={faPaperPlane}
               size='3x'
-              className="font-color-prmry cursor-pointer"
+              className="font-color-prmry-w-hover cursor-pointer"
 
             />
           </a>
@@ -171,7 +171,7 @@ const ContactAdditional = () => {
             <FontAwesomeIcon
               icon={faLinkedin}
               size='3x'
-              className="font-color-prmry cursor-pointer"
+              className="font-color-prmry-w-hover cursor-pointer"
             />
           </a>
         </div>
