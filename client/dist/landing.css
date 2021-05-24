@@ -43,10 +43,6 @@
   transition: all .5s ease-in-out;
 }
 
-#landing-img:hover {
-  transform: scale(1.05);
-}
-
 #landing-icon-bar {
   height: 100px;
   width: 100%;
@@ -91,6 +87,7 @@
   width: 100%;
   text-align: center;
   top: 60%;
+  font-size: 14px;
 }
 
 #learn-more-container:hover {
