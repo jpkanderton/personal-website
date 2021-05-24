@@ -11,6 +11,7 @@ const Contact = ({isDisplayed}) => {
   return (
     <div
       id="contact-page-container"
+      className="bckgrnd-main-prmry"
       style = {isDisplayed ? shown : hidden}
     >
       <div id="contact-main-container">

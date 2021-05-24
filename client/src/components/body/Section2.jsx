@@ -9,7 +9,7 @@ const Section2 = () =>{
     <div id="section-2" className="project-section">
       <div className="project-details-container">
         <h1 className="font-color-prmry project-title project-subsection">Cameron</h1>
-        <div className="font-color-prmry project-overview-title project-subsection">Overview</div>
+        <div className="font-color-scndry1 project-overview-title project-subsection">Overview</div>
         <div className="font-color-prmry project-details-content project-subsection">{description}</div>
       </div>
       <div className="project-video-container">

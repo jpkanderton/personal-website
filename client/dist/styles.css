@@ -8,6 +8,9 @@
 
 html {
   scroll-behavior: smooth;
+  background-image: linear-gradient(#367180,  #254E58);
+  background-color: #367180;
+
 }
 
 a {
@@ -21,6 +24,7 @@ a:hover {
 
 body {
   /* overflow: hidden; */
+  background-image: linear-gradient(#367180,  #254E58);
 }
 
 #main-container {
@@ -35,6 +39,7 @@ body {
 }
 
 #app {
+  background-image: linear-gradient(#367180,  #254E58);
 }
 
 .hidden-wrapper {
