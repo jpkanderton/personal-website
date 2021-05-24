@@ -9,7 +9,7 @@ const textThree = 'waszzzzup sdfkjsdkfjsa hhhheeyyyyyyyy';
 
 const pictureContainer =
   <div id="about-picture-container">
-    <img id="about-prof-img" src="resources/_DSC1180.JPG"></img>
+    <img id="about-prof-img" src="resources/john-looking-1.png"></img>
   </div>;
 
 const About = ({isDisplayed}) => {

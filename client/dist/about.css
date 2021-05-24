@@ -31,20 +31,20 @@
 .about-side {
   width: 100%;
   height: 100%;
-  /* border: 2px solid white; */
   outline: 2px solid white;
   margin-top: -2px;
   margin-left: -2px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 #about-picture-container {
   width: 100%;
-  padding-top: 50%;
 }
 
 #about-prof-img {
-  position: absolute;
+  position: relative;
+  width: 300%;
+  left: -100%;
 }
 
 
@@ -63,6 +63,10 @@
   .about-side {
     width: 100%;
     height: 100%;
+  }
+
+  #about-prof-img {
+    top: -40vw;
   }
 
 }

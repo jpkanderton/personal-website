@@ -104,6 +104,7 @@ const ContactForm = () => {
         />
         <input
           id="send"
+          className="font-color-prmry"
           type="submit"
           value="Send"
         />

@@ -72,19 +72,19 @@ const ProjDropDown = () => {
           className={ddProject}
           href={hrefs.section1}
         >
-          Aqua
+          <span>Aqua</span>
         </a>
         <a
           className={ddProject}
           href={hrefs.section2}
         >
-          Cameron
+          <span>Cameron</span>
         </a>
         <a
           className={ddProject}
           href={hrefs.section3}
         >
-          Show Me The Goals!​
+          <span>Show Me The Goals!​</span>
         </a>
       </div>
     </div>
