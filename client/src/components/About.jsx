@@ -6,21 +6,21 @@ const About = ({isDisplayed}) => {
   return (
     <>
       {isDisplayed ?
-      <div id="about-2-wrapper">
-        <div id="about-2-content-wrapper">
-          <div id="about-2-content">
-            <div id="about-2-img-wrapper">
-              <img id="about-2-img" src="resources/john-looking-1.png"></img>
+      <div id="about-wrapper">
+        <div id="about-content-wrapper">
+          <div id="about-content">
+            <div id="about-img-wrapper">
+              <img id="about-img" src="resources/john-looking-1.png"></img>
             </div>
-            <div id="about-2-text-wrapper">
+            <div id="about-text-wrapper">
               <div
-                id="about-2-text-title"
+                id="about-text-title"
                 className="about-text"
               >
                 <p>{introTxt}</p>
               </div>
               <div
-                id="about-2-text-text1"
+                id="about-text-text1"
                 className="about-text"
               >
                 <p>{sftwrTxt}</p>
@@ -31,7 +31,7 @@ const About = ({isDisplayed}) => {
                 <p>{recrtnTxt}</p>
               </div>
               <div
-                id="about-2-text-text2"
+                id="about-text-text2"
                 className="about-text"
               >
                 <p>{cntctTxt}</p>
