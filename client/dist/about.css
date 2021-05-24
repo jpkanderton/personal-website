@@ -11,18 +11,15 @@
 #about-content {
   margin-top: 10vh;
   width: 80vw;
-  background-color: black;
   display: flex;
 }
 
 #about-img-wrapper {
   width: 50%;
-  background-color: burlywood;
 }
 
 #about-text-wrapper {
   width: 50%;
-  background-color: cornflowerblue;
 }
 
 #about-img {
@@ -43,6 +40,38 @@
 
 .about-text {
   margin-top: 2vh;
+}
+
+#contact-button {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.317);
+  border-bottom: 2px solid white;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+}
+
+#contact-button:hover {
+  background-color: rgba(0, 0, 0, 0.605);
+}
+
+#projects-button {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.317);
+  border-bottom: 2px solid white;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+}
+
+#projects-button:hover {
+  background-color: rgba(0, 0, 0, 0.605);
 }
 
 

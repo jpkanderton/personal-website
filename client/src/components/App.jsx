@@ -76,6 +76,11 @@ const App = () =>{
     setLandingStatus('entering');
   };
 
+  const contactClick = () => {
+    setDisplayAbout(false);
+    displayContact();
+  };
+
   return (
     <>
       <Home
@@ -104,6 +109,7 @@ const App = () =>{
       <About
         isDisplayed={aboutDisplayed}
         hideAbout={hideAbout}
+        contactClick={contactClick}
       />
     </>
   )

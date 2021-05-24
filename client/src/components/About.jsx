@@ -1,7 +1,7 @@
 import React from 'react';
 const { useState } = React;
 
-const About = ({isDisplayed}) => {
+const About = ({isDisplayed, contactClick}) => {
 
   return (
     <>
@@ -15,7 +15,6 @@ const About = ({isDisplayed}) => {
             <div id="about-text-wrapper">
               <div
                 id="about-text-title"
-                className="about-text"
               >
                 <p>{introTxt}</p>
               </div>
@@ -25,6 +24,7 @@ const About = ({isDisplayed}) => {
               >
                 <p>{sftwrTxt}</p>
               </div>
+              <ProjectsButton />
               <div
                 className="about-text"
               >
@@ -36,7 +36,7 @@ const About = ({isDisplayed}) => {
               >
                 <p>{cntctTxt}</p>
               </div>
-              <ContactButton/>
+              <ContactButton contactClick={contactClick} />
             </div>
           </div>
         </div>
@@ -47,10 +47,14 @@ const About = ({isDisplayed}) => {
   )
 }
 
-const ContactButton = () => {
+const ContactButton = ({contactClick}) => {
   return (
-    <div id="contact-button">
-      Contact Me!
+    <div
+      id="contact-button"
+      className="clickable"
+      onClick={contactClick}
+    >
+      <p className="clickable">Contact Me!</p>
     </div>
   )
 }
@@ -58,7 +62,7 @@ const ContactButton = () => {
 const ProjectsButton = () => {
   return (
     <div id="projects-button">
-      Projects
+      <p className="clickable">Projects</p>
     </div>
   )
 }

@@ -13,7 +13,6 @@ const MainIcon = ({status, mainIconClick, aboutDisplayed, contactDisplayed, disp
   if (status !== 'entered') {
     xlcStyle = xlcStyleExit;
   }
-
   return (
     <a
       id="main-icon-container"
