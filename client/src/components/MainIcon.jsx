@@ -24,7 +24,7 @@ const MainIcon = ({status, mainIconClick, aboutDisplayed, contactDisplayed, disp
       href="#top"
       >
       {/* {status === 'entered' || aboutDisplayed || contactDisplayed ? <BsX size={70} color={'white'}/> : <FaGripLines size={35} color={'white'}/>} */}
-      <BsX size={70} color={'white'}/>
+      <BsX size={70} className="font-color-prmry-w-hover"/>
     </a>
   )
 }

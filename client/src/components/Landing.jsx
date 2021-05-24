@@ -52,7 +52,7 @@ const Landing = ({mainIconClick, status}) => {
           </h1>
           <h6
             id="landing-title-2"
-            className="font-color-prmry cursor-arrow"
+            className="font-color-prmry-w-hover cursor-arrow"
           >
             I'm a software engineer and I like to build things</h6>
           <div
@@ -72,7 +72,7 @@ const Landing = ({mainIconClick, status}) => {
               <FontAwesomeIcon
                 icon={faGithub}
                 size='3x'
-                className="font-color-prmry cursor-pointer"
+                className="font-color-prmry-w-hover cursor-pointer"
               />
             </a>
             <a
@@ -82,7 +82,7 @@ const Landing = ({mainIconClick, status}) => {
               <FontAwesomeIcon
                 icon={faPaperPlane}
                 size='3x'
-                className="font-color-prmry cursor-pointer"
+                className="font-color-prmry-w-hover cursor-pointer"
 
               />
             </a>
@@ -93,7 +93,7 @@ const Landing = ({mainIconClick, status}) => {
               <FontAwesomeIcon
                 icon={faLinkedin}
                 size='3x'
-                className="font-color-prmry cursor-pointer"
+                className="font-color-prmry-w-hover cursor-pointer"
               />
             </a>
           </div>

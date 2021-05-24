@@ -197,6 +197,7 @@ const copyToClipboard = () => {
   newElement.type = "text";
   newElement.innerText = "Copied!";
   newElement.setAttribute("id", "copied-alert");
+  newElement.setAttribute("class", "bckgrnd-scndry2-prmry");
   newElement.setAttribute("class", "contact-page-email-font");
   const myElement = document.querySelector('#contact-additional-email-container');
   myElement.appendChild(newElement);
