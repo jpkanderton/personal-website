@@ -62,11 +62,10 @@
 }
 
 form {
-  //
 }
 
 input {
-  //
+  color: white;
 }
 
 .contact-page-note-font {
@@ -105,7 +104,7 @@ input {
 .thank-you {
   padding-top: 25%;
   font-size: 30px;
-  border: 2px black solid;
+  border: 2px white solid;
   padding: 10% 10% 10% 10%;
   margin-right: 10%;
   text-align: center;
@@ -113,11 +112,20 @@ input {
 
 #copied-alert {
   margin-left: 10px;
-  color: #254E58
+  color: #88BDBC
 }
 
 ::placeholder {
   color: white;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea {
+  color: white;
+  padding: 1vh 1vw 1vh 1vw;
 }
 
 @media only screen and (max-width: 509px) {

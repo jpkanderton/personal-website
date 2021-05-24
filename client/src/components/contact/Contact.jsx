@@ -93,19 +93,19 @@ const ContactForm = () => {
           })}
         />
         {errors.message && 'message required'}
-        <input
+        <textarea
           id="contact-input-large"
           className={!errors.message ? "contact-input" : "contact-input error-occurred"}
           type="text"
           name="message"
-          placeholder="Type your message here"
+          placeholder="Type your message here..."
           {...register("message", {
             required: true
           })}
         />
         <input
           id="send"
-          className="font-color-prmry"
+          className="font-color-prmry clickable"
           type="submit"
           value="Send"
         />
