@@ -52,7 +52,7 @@ const Landing = ({mainIconClick, status}) => {
           </h1>
           <h6
             id="landing-title-2"
-            className="font-color-prmry-w-hover cursor-arrow"
+            className="font-color-prmry cursor-arrow"
           >
             I'm a software engineer and I like to build things</h6>
           <div
