@@ -116,6 +116,10 @@ input {
   color: #254E58
 }
 
+::placeholder {
+  color: white;
+}
+
 @media only screen and (max-width: 509px) {
   #contact-main-container {
     display: flex;

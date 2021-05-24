@@ -18,7 +18,7 @@ const Section3 = () =>{
         </div>
         <div className="tech-container">
           <div className="tech-title">
-            <p className="font-color-prmry large-font">{techTitle}</p>
+            <p className="font-color-scndry1 large-font">{techTitle}</p>
             <p className="font-color-prmry">{frontEndTech}</p>
             <p className="font-color-prmry">{backEndTech}</p>
           </div>
