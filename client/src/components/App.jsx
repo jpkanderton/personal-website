@@ -3,7 +3,6 @@ import axios from 'axios';
 import Home from './Home.jsx';
 import MainIcon from './MainIcon.jsx';
 import About from './About.jsx';
-import About2 from './About2.jsx';
 import Contact from './contact/Contact.jsx'
 import Landing, { Wazzup } from './Landing.jsx';
 
@@ -102,7 +101,7 @@ const App = () =>{
         isDisplayed={contactDisplayed}
         hideContact={hideContact}
       />
-      <About2
+      <About
         isDisplayed={aboutDisplayed}
         hideAbout={hideAbout}
       />
