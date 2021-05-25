@@ -111,7 +111,7 @@ const ContactForm = () => {
         />
       </form>
       :
-      <div className="thank-you">Thanks for the message!</div>
+      <div className="thank-you font-color-prmry">Thanks for the message!</div>
       }
     </div>
   )

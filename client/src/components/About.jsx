@@ -69,7 +69,7 @@ const ProjectsButton = () => {
 
 const TechItms = () => {
   const techItmNames = ['JavaScript', 'React', 'HTML', 'CSS', 'jQuery', 'Styled-Components', 'Webpack', 'Babel', 'Node.js', 'ExpressJS', 'MySQL', 'Sequelize', 'MongoDB', 'Mongoose', 'PostgreSQL', 'Apache Cassandra', 'Nginx', 'Redis', 'PM2', 'AWS/EC2/S3', 'Enzyme', 'Jest', 'ArtilleryIO', 'LoaderIO', 'New Relic', 'Git Workflow', 'Agile Methodology']
-  const techItmElements = techItmNames.map(itm=> <div key="tech-itm" className="tech-itm font-color-prmry">{itm}</div>)
+  const techItmElements = techItmNames.map(itm=> <div key="tech-itm" className="tech-itm font-color-prmry-w-hover">{itm}</div>)
   return (
     <div id="tech-content">
       {techItmElements}

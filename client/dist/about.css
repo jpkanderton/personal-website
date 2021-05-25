@@ -98,6 +98,10 @@
   font-size: 20px;
 }
 
+.tech-itm:hover {
+  background-color: #97b1b7;
+}
+
 #tech-title {
   width: 80vw;
 }
