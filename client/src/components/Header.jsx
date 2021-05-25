@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Select from "react-select";
-import ProjDropDown from './ProjDropDown.jsx';
-
+import ProjectDropdown from './ProjectDropdown.jsx';
 
 const { useState, useRef } = React;
 
@@ -42,7 +41,7 @@ const Header = ({aboutClick, displayContact, homeClick}) =>{
           >
             About
           </a>
-          <ProjDropDown />
+          <ProjectDropdown />
           <a
             className="grid-col-start-10 font-color-prmry header-text"
             onClick={displayContact}

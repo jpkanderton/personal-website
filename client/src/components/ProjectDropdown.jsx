@@ -2,7 +2,7 @@ import React from 'react';
 
 const { useState, useRef } = React;
 
-const ProjDropDown = () => {
+const ProjectDropdown = () => {
   const [isOpen, setOpen] = useState(false);
   const [selectedValue, setValue] = useState('');
   const [isSectionClickable, setSectionClickable] = useState(false);
@@ -90,4 +90,4 @@ const ProjDropDown = () => {
   )
 }
 
-export default ProjDropDown;
+export default ProjectDropdown;
