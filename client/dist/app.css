@@ -1,9 +1,9 @@
 @import './CSS/_background-colors.css';
 @import './CSS/_font-color.css';
+@import './CSS/_styles.css';
 @import './CSS/about.css';
 @import './CSS/body.css';
 @import './CSS/contact.css';
-@import './CSS/dropdown.css';
 @import './CSS/header.css';
 @import './CSS/landing.css';
-@import './CSS/styles.css';
+@import './CSS/project-dropdown.css';
