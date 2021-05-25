@@ -62,9 +62,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div
-      className="contact-containers"
-    >
+    <div>
       {!submitSuccess ?
       <form
         id="contact-form-container"
@@ -121,7 +119,6 @@ const ContactAdditional = () => {
   return (
     <div
       id="contact-additional-container"
-      className="contact-containers"
     >
       <div
         id="contact-additional-note-container"

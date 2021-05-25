@@ -16,16 +16,9 @@
   grid-template-columns: 50% 50%;
 }
 
-.contact-containers {
-}
-
 #contact-form-container {
   display: flex;
   flex-direction: column;
-}
-
-#contact-additional-container {
-
 }
 
 .contact-input {
@@ -59,10 +52,6 @@
 
 #send:hover {
   background-color: rgba(0, 0, 0, 0.605);
-}
-
-form {
-
 }
 
 input {
