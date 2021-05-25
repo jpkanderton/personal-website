@@ -17,21 +17,24 @@ const projectSectionsData = [
     description: 'Collaborated with a remote team to build a booking application for an online property rental marketplace. I was charged with developing a listings carousel that would display other similar rental properties. Using a ​Node.​js​ Restful API and a​ ​MySQL ​​database, I built the application to display properties based on location data. I then created modular responsive modals using React Hooks and styled-components. Our team integrated the various micro-services together on a proxy server and lastly deployed the app on AWS EC2.',
     frontend: 'React, React Hooks, CSS-Grid, CSS-Flex',
     backend: 'Node, MySQL',
-    video: "https://my-vids-bucket.s3-us-west-1.amazonaws.com/FEC_first_video.mov"
+    video: "https://my-vids-bucket.s3-us-west-1.amazonaws.com/FEC_first_video.mov",
+    id: "section-1"
   },
   {
     name: 'Cameron',
     description: 'Scaled the backend for the additional products module of an online retail marketplace, containing over 10 million primary records, to a PostgreSQL database. Reduced response time by over 95% with throughput of 1k RPS with the implementation of an Nginx load-balancer distributed across four service clones. Improved Google Lighthouse audit page speed score to 98% with Redis caching system.',
     frontend: 'React, Axios, CSS-Modules, Webpack',
     backend: 'Node, Express, Nginx, Redis, PostgreSQL',
-    image: "https://my-vids-bucket.s3-us-west-1.amazonaws.com/sdc-architecture.png"
+    image: "https://my-vids-bucket.s3-us-west-1.amazonaws.com/sdc-architecture.png",
+    id: "section-2"
   },
   {
     name: 'Show Me The Goals!​',
     description: 'Designed a single-page look-up application rendering videos of current world soccer highlights based on input from a modal search bar augmented with a team statistics feature; all sourced from multiple public APIs. Optimized rendering of individual ​React​components by developing application with R​ eact Hooks​to handle state. Produced a dynamic modal interface by employing a combination of ​CSS Grid​​and C​SS Flexbox',
     frontend: 'React, React Hooks, CSS-Grid, CSS-Flex',
     backend: 'Node, MySQL',
-    video: 'https://my-vids-bucket.s3-us-west-1.amazonaws.com/mvp_screen_record.mov'
+    video: 'https://my-vids-bucket.s3-us-west-1.amazonaws.com/mvp_screen_record.mov',
+    id: "section-3"
   }
 ]
 
@@ -40,7 +43,10 @@ const projectSections = projectSectionsData.map((data, num) => {
   const imgORvid = data.video ? <video className="video" src={data.video} width="320" height="240" controls/> : <img className="video" src={data.image} width="320" height="240"/>
 
   return (
-    <div className="project-section">
+    <div
+      id={data.id}
+      className="project-section"
+    >
       <div className="project-details-container">
         <h1 className="font-color-prmry project-title project-subsection">{data.name}​</h1>
         <div className="font-color-scndry1 project-overview-title project-subsection">Overview</div>
