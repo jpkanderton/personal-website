@@ -18,10 +18,6 @@
   transition: all .25s ease;
 }
 
-#landing-inner:hover {
-  /* transform: scale(1.5); */
-}
-
 #landing-text {
   position: absolute;
   text-align: center;
