@@ -7,7 +7,7 @@
 }
 
 .font-color-scndry2 {
-  color: white
+  color: #254E58
 }
 
 .font-color-prmry-w-hover {
@@ -16,13 +16,4 @@
 
 .font-color-prmry-w-hover:hover {
   color: #112D32;
-}
-
-
-.border-color-prmry {
-  color: white
-}
-
-.border-color-scndry1 {
-  color: green;
 }
