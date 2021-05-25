@@ -3,7 +3,7 @@ import axios from 'axios';
 import Home from './Home.jsx';
 import MainIcon from './MainIcon.jsx';
 import About from './About.jsx';
-import Contact from './contact/Contact.jsx'
+import Contact from './Contact.jsx'
 import Landing, { Wazzup } from './Landing.jsx';
 
 

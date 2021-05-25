@@ -1,5 +1,4 @@
 import React from 'react';
-import onHover from './helpers.js';
 
 const { useState, useRef } = React;
 
