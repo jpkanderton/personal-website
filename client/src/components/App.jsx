@@ -5,10 +5,9 @@ import MainIcon from './MainIcon.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx'
 import Landing, { Wazzup } from './Landing.jsx';
-import useKeyPress from './useKeyPress'
 
 
-const { useState } = React;
+const { useState, useEffect } = React;
 
 const App = () =>{
   const [landingStatus, setLandingStatus] = useState('entered');
@@ -17,58 +16,40 @@ const App = () =>{
   const [homeDisplayed, setDisplayHome] = useState(false);
   const [displayMainIcon, setDisplayMainIcon] = useState(true);
 
-  const displayHome = () => setDisplayHome(true);
-  const hideHome = () => setDisplayHome(false);
-
-  useKeyPress('Escape', () => {
-    alert(`keypress made \n landing status ${landingStatus} \n contactDisplayed ${contactDisplayed} \n aboutDisplayed ${aboutDisplayed}`)
-    if (landingStatus === 'entered') return mainIconClick();
-    if (contactDisplayed) return setDisplayContact(false);
-    if (aboutDisplayed) return setDisplayAbout(false);
-  })
-
-  const nameClick = () => {
-    setDisplayMainIcon(true);
-    setDisplayMainIcon(true);
-    setDisplayHome(false);
-    setLandingStatus('entered');
+  const displayHome = () => {
+    if (landingStatus === 'entered') {
+      setTimeout(() => {
+        setDisplayHome(true)
+        setLandingStatus('exited')
+      }, 249);
+      setDisplayMainIcon(false);
+      setLandingStatus('exiting');
+    } else {
+      setDisplayAbout(false);
+      setDisplayContact(false);
+      setDisplayMainIcon(false);
+      setLandingStatus('exited');
+      setDisplayHome(true);
+    }
   }
+
+  const useKeyPress = (key, action) => { useEffect(()=>{
+      function onKeyUp(e) {
+        if (e.key === key) action();
+      }
+      window.addEventListener('keyup', onKeyUp);
+      return () => {window.removeEventListener('keyup', onKeyUp)}
+    }, [landingStatus, aboutDisplayed, contactDisplayed, homeDisplayed]);
+  }
+
+  useKeyPress('Escape', displayHome);
+
+  const mainIconClick = displayHome;
 
   const aboutClick = () => {
     setDisplayMainIcon(true);
     setDisplayAbout(true);
     setDisplayHome(false);
-  };
-  const hideAbout = () => setDisplayAbout(false);
-  const displayContact = () => {
-    setDisplayMainIcon(true);
-    setDisplayHome(false);
-    setDisplayContact(true);
-  }
-  const hideContact = () => {
-    setDisplayContact(false)
-  };
-
-  const mainIconClick = () => {
-    setDisplayMainIcon(false);
-    if (landingStatus === 'exited') {
-      if (aboutDisplayed) {
-        setDisplayAbout(false);
-        setDisplayHome(true);
-        return;
-      } else {
-        if(!homeDisplayed) {
-          setDisplayHome(true);
-          setDisplayContact(false);
-        };
-        return;
-      }
-    }
-    setTimeout(() => {
-      setDisplayHome(true)
-      setLandingStatus('exited')
-    }, 249);
-    setLandingStatus('exiting');
   };
 
   const homeClick = () => {
@@ -79,16 +60,19 @@ const App = () =>{
 
   const contactClick = () => {
     setDisplayAbout(false);
-    displayContact();
+    setDisplayHome(false);
+    setLandingStatus('exited');
+    setDisplayContact(true);
+    setDisplayMainIcon(true);
   };
 
   return (
     <>
       <Home
         landingStatus={landingStatus}
-        aboutClick={aboutClick}
-        displayContact={displayContact}
         homeDisplayed={homeDisplayed}
+        aboutClick={aboutClick}
+        contactClick={contactClick}
         homeClick={homeClick}
       />
       <Landing
@@ -101,11 +85,9 @@ const App = () =>{
       />
       <Contact
         isDisplayed={contactDisplayed}
-        hideContact={hideContact}
       />
       <About
         isDisplayed={aboutDisplayed}
-        hideAbout={hideAbout}
         contactClick={contactClick}
       />
     </>

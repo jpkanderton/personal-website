@@ -5,7 +5,7 @@ import Body from './Body.jsx';
 
 const { useState } = React;
 
-const Home = ({aboutClick, displayContact, landingStatus, homeDisplayed, homeClick}) =>{
+const Home = ({landingStatus, homeDisplayed, aboutClick, contactClick, homeClick}) =>{
   if (!homeDisplayed) return null;
   let mainContainerStyle = null;
   if (landingStatus === 'entered') {
@@ -19,7 +19,7 @@ const Home = ({aboutClick, displayContact, landingStatus, homeDisplayed, homeCli
     >
       <Header
         aboutClick={aboutClick}
-        displayContact={displayContact}
+        contactClick={contactClick}
         homeClick={homeClick}
       />
       <Body />

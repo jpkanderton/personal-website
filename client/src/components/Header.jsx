@@ -11,7 +11,7 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' },
 ];
 
-const Header = ({aboutClick, displayContact, homeClick}) =>{
+const Header = ({aboutClick, contactClick, homeClick}) =>{
   const [selectedOption, setSelectedOption] = useState(null);
 
   return (
@@ -44,7 +44,7 @@ const Header = ({aboutClick, displayContact, homeClick}) =>{
           <ProjectDropdown />
           <a
             className="grid-col-start-10 font-color-prmry header-text"
-            onClick={displayContact}
+            onClick={contactClick}
           >
             Contact
           </a>

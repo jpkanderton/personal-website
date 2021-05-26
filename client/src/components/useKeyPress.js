@@ -7,5 +7,5 @@ export default function useKeyPress(key, action) {
     }
     window.addEventListener('keyup', onKeyUp);
     return () => {window.removeEventListener('keyup', onKeyUp)}
-  }, []);
+  }, [landingStatus]);
 }
