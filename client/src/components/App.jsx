@@ -96,9 +96,8 @@ const App = () =>{
         status={landingStatus}
       />
       <MainIcon
-        status={landingStatus}
         mainIconClick={mainIconClick}
-        displayMainIcon = {displayMainIcon}
+        isDisplayed = {displayMainIcon}
       />
       <Contact
         isDisplayed={contactDisplayed}
