@@ -40,6 +40,10 @@
   margin-left: 2vw;
 }
 
+.project-github-icon-container * {
+  cursor: pointer;
+}
+
 .project-title {
   font-size: 60px;
 }
