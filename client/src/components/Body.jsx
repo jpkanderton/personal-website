@@ -38,7 +38,7 @@ const projectSectionsData = [
   }
 ]
 
-const projectSections = projectSectionsData.map((data, num) => {
+const projectSections = projectSectionsData.map((data, index) => {
 
   const imgORvid = data.video ? <video className="video" src={data.video} width="320" height="240" controls/> : <img className="video" src={data.image} width="320" height="240"/>
 
@@ -46,6 +46,7 @@ const projectSections = projectSectionsData.map((data, num) => {
     <div
       id={data.id}
       className="project-section"
+      key={index}
     >
       <div className="project-details-container">
         <h1 className="font-color-prmry project-title project-subsection">{data.name}​</h1>
