@@ -24,12 +24,32 @@
   min-height: 500px;
 }
 
-.project-subsection {
-  padding-top: 5vh;
+#section-title-container {
+  width: 100%;
+  display: flex;
+}
+
+#project-overview-title-container {
+  display: flex;
+}
+
+.project-github-icon-container {
+  font-size: 40px;
+  justify-content: start;
+  margin-top: 5vh;
+  margin-left: 2vw;
 }
 
 .project-title {
   font-size: 60px;
+}
+
+.h1-title-container {
+  width: 70%;
+}
+
+.project-subsection {
+  padding-top: 5vh;
 }
 
 .project-overview-title {
