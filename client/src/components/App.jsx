@@ -5,6 +5,7 @@ import MainIcon from './MainIcon.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx'
 import Landing, { Wazzup } from './Landing.jsx';
+import useKeyPress from './useKeyPress'
 
 
 const { useState } = React;
@@ -18,6 +19,13 @@ const App = () =>{
 
   const displayHome = () => setDisplayHome(true);
   const hideHome = () => setDisplayHome(false);
+
+  useKeyPress('Escape', () => {
+    alert(`keypress made \n landing status ${landingStatus} \n contactDisplayed ${contactDisplayed} \n aboutDisplayed ${aboutDisplayed}`)
+    if (landingStatus === 'entered') return mainIconClick();
+    if (contactDisplayed) return setDisplayContact(false);
+    if (aboutDisplayed) return setDisplayAbout(false);
+  })
 
   const nameClick = () => {
     setDisplayMainIcon(true);
@@ -69,13 +77,6 @@ const App = () =>{
     setLandingStatus('entered');
   };
 
-  const exitingClick = () => {
-    setTimeout(() => {
-      setLandingStatus('entered')
-    }, 249);
-    setLandingStatus('entering');
-  };
-
   const contactClick = () => {
     setDisplayAbout(false);
     displayContact();
@@ -97,9 +98,6 @@ const App = () =>{
       <MainIcon
         status={landingStatus}
         mainIconClick={mainIconClick}
-        exitingClick={exitingClick}
-        aboutDisplayed = {aboutDisplayed}
-        contactDisplayed = {contactDisplayed}
         displayMainIcon = {displayMainIcon}
       />
       <Contact

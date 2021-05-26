@@ -1,7 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane} from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+// import useKeypress from './useKeypress';
 
 
 const { useState, useEffect } = React;
@@ -22,12 +23,6 @@ const Landing = ({mainIconClick, status}) => {
     innerStyle = innerStyleExit;
     landingSquareStyle = landingSquareStyleExit;
   }
-
-  const [line, setLine] = useState('');
-
-  useEffect(()=> {
-    setLine('Hey, I\'m John');
-  })
 
   return (
     <div
