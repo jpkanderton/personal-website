@@ -60,6 +60,8 @@ const projectSections = projectSectionsData.map((data, index) => {
           <a
                 className="project-github-icon-container cntr-w-flex"
                 href={data.projectGitHub}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon
                   className="font-color-prmry-w-hover cursor-pointer"

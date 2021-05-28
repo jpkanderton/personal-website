@@ -145,6 +145,8 @@ const ContactAdditional = () => {
           <a
             className="contact-icon-container cntr-w-flex"
             href="https://github.com/jpkanderton"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon
               className="font-color-prmry-w-hover cursor-pointer"
@@ -155,6 +157,8 @@ const ContactAdditional = () => {
           <a
             className="contact-icon-container cntr-w-flex"
             href="mailto:john.pk.anderton@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon
               icon={faPaperPlane}
@@ -166,6 +170,8 @@ const ContactAdditional = () => {
           <a
             className="contact-icon-container cntr-w-flex"
             href="https://www.linkedin.com/in/johnpkanderton/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon
               icon={faLinkedin}

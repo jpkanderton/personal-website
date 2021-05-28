@@ -1,0 +1,4 @@
+<FontAwesomeIcon
+  className="font-color-prmry-w-hover cursor-pointer"
+  icon={faGithub}
+/>
