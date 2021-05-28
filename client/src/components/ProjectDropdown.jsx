@@ -71,13 +71,13 @@ const ProjectDropdown = () => {
           className={ddProject}
           href={hrefs.section1}
         >
-          <span className="clickable">Aqua</span>
+          <span className="clickable">Rental Booking Application</span>
         </a>
         <a
           className={ddProject}
           href={hrefs.section2}
         >
-          <span className="clickable">Cameron</span>
+          <span className="clickable">Retail Product Page</span>
         </a>
         <a
           className={ddProject}

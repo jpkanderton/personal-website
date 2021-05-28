@@ -2,6 +2,7 @@
   width: 120%;
   height: 10px;
   cursor: pointer;
+  position: relative;
 }
 
 #dropdown-title {
@@ -15,12 +16,14 @@
 
 #dropdown-projects-container {
   height: 200px;
-  width: 100%;
+  width: 150%;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   z-index: -1;
   cursor: default;
+  position: absolute;
+  left: -25px;
 }
 
 .dropdown-project {
